@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Montserrat;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(120deg,#FFFFFF, #999999,#454545);
+    
+}
+
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+  
+}
+
+
+.logo{
+    float: left;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 4em;
+    letter-spacing: 1.2px;
+}
+
+.logo a{
+    
+    color: rgb(32, 114, 24);
+
+}
+
+.logo a:hover{
+    
+    color: rgb(92, 201, 70);
+}
+
+
+
+.header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    text-align: center;
+}
+
+.header h2 {
+    color: rgb(199, 206, 198);
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.header p {
+    color: #c2ba90;
+    font-weight: lighter;
+    font-size: 20px;
+    margin: 0 0 60px;
+}
+
+
+.header a {
+    text-decoration: none;
+    margin-top: 10px;
+  font-family: Montserrat;
+  font-size: 16px;
+  color:rgb(207, 235, 202);
+  background: rgb(48, 209, 33);
+  border: none;
+  padding: 7px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+.header .second {
+    background: none;
+}
+
+.header .second:hover {
+    background:none;
+    color: rgb(32, 114, 24);
+}
+
+.header a:hover {
+    color: rgb(207, 235, 202);
+    background: rgb(32, 114, 24);
+}
