@@ -1,0 +1,52 @@
+body{
+    background-color:white;
+}
+#log_in{
+      float:right;
+      margin:5px;
+      padding:5px;
+}
+#sign_up{
+      float:right;
+      margin:0px;
+      padding:0px;
+      border-radius:10px;
+      background-color:#FF8100;
+}
+.container {
+      margin:40px;
+}
+input {
+  width: 60%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ff8100;
+  box-sizing: border-box;
+  border-radius:10px;
+  
+  }
+button {
+  width:40%;
+  padding: 6px 20px;
+  margin:8px 0;
+  display:inline-block;
+  border:1px solid #ff8100;
+  background-color:#ff8100;
+  border-radius:10px;
+}
+​
+b{
+  color:blue;
+}
+​
+#headings{
+        color:##ff8100;
+        }
+​
+placeholder{
+      color:#ff8100;
+      }
+#full_name{
+      color:#ff8100;
+}
