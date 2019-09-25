@@ -8,47 +8,36 @@
 	<title>Sign Up</title>
 </head>
 <body>
+	<header>
+		<nav class="nav">
+			<img src="assets/img/logo.png" alt="">
+			<navbar>
+				<a href="login.html">Login</a>
+				<a href="SignUp.html">Sign Up</a>
+			</navbar>
+		</nav>
+	</header>
 	<div>
-		<div>
 			<form name="regForm" action="" method="post" onsubmit="return validateForm()">
 				<div id="alert">
 					<p id="message"></p>
 				</div>
-				<div>
-					<label for="name">First Name: </label>
-					<input type="text" name="firstName">
-				</div>
+					<input type="text" name="firstName" placeholder="Firstname">
 
-				<div>
-					<label for="name">Last Name: </label>
-					<input type="text" name="lastName" >
-				</div>
+					<input type="text" name="lastName" placeholder="Lastname">
 
-				<div>
-					<label for="email">Email: </label>
-					<input type="email" name="email" >
-				</div>
+					<input type="email" name="email" placeholder="Email">
 
-				<div>
-					<label for="password">Password: </label>
-					<input type="password" name="password" >
-				</div>
+					<input type="password" name="password" placeholder="Password">
 
-				<div>
-					<label for="password">Confirm Password: </label>
-					<input type="password" name="confirmPassword" >
-				</div>
+					<input type="password" name="confirmPassword" placeholder="Confirm Password">
 
-				<div>
-					<input type="submit" name="submit" value="Sign Up" onclick="myFunction()">
-				</div>
+					<button>Sign up</button>
+
+					<p class="message">Already a member? <a href="login.html" id="show_login">Sign in</a></p>
 			</form>
-		</div>
 	</div>
-
-	<div>
 		<script src="js/signUp.js"></script>
-	</div>
 
 </body>
 </html>
