@@ -1,28 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="Ie=edge">
-  <title>Login Page</title>
-  <link rel="stylesheet" type="text/css" href="style.css" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/signUp.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Sign Up</title>
+  <style type="text/css">
+    .row {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      font-family: 'montaga';
+      font-size: 18px;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      border-bottom-right-radius: 80%;
+     
+    }
+
+    .form {
+      padding: 5px;
+    }
+
+    .form-header {
+      text-align: center;
+      color: #088787;
+    }
+
+    .form-header p:first-child {
+      text-align: right;
+      margin-bottom: 80px;
+      margin-right: 2rem;
+      margin-top: 2rem;
+    }
+
+    .form-header p:first-child::before {
+      content: "\2192";
+      color: green;
+      min-width: 100px !important;
+      padding-right: 30px;
+
+    }
+
+    .form-header p:first-child a {
+      text-decoration: none;
+      color: #088787;
+    }
+
+    .form-header p:last-child {
+      letter-spacing: 2px;
+    }
+
+    form {
+      margin: 0 auto;
+      width: 60% !important;
+    }
+
+    form input[type=password],
+    form input[type=text],
+    form input[type=email] {
+      height: 3rem;
+      font-family: 'montaga';
+      font-size: 18px;
+      color: #000000;
+    }
+
+    form input[placeholder] {
+      font-family: 'montaga';
+      font-size: 18px;
+      color: #000000;
+    }
+
+    form input:focus {
+      outline-color: #088787 !important;
+      border-color: #088787 !important;
+    }
+
+    form input[type=submit] {
+      position: relative;
+      float: right;
+      border: none;
+      border-radius: 7px;
+      padding: 10px;
+      font-family: 'montaga';
+      font-size: 18px;
+      color: #000000 !important;
+      right: 0 !important;
+      background-color: #02B8C8;
+    }
+
+    form input[type=submit]:hover {
+      background-color: #008fa2 !important;
+      color: #c0c0c0;
+    }
+  </style>
 </head>
+
 <body>
-  <nav>
-     <span id="log_in">Login</span> <span id="sign_up">Sign Up</span>
-  </nav>
-  <main>
-  <div class="container" align="center">
-    <p id="headings" align="center">Register</p>
-    <form target="_blank" method="POST">
-      <input type="text" placeholder ="Full name" name="full_name" id="ful_name" required><br>
-      <input type="email" placeholder ="Email" name="email" id="e_mail" required><br>
-      <input type="password" placeholder ="Password" name="password" id="password" required minlength="8"><br>
-      <input type="password" placeholder ="Confirm Password" name="conpassword" id="con_password" required minlength="8"><br>
-      <button type="submit" value="submit" id="signin_btn">Sign up</button>
-    </form>
-     <div id="log_in1" align="center">Already a member? <b id="log_in2">Login</b></div>
+  <div class="row">
+    <div class="pic-frame col-md-7">
+      <img src="https://res.cloudinary.com/epospiky/image/upload/v1569407362/Rectangle.png" class="img-responsive">
+    </div>
+    <div class="form col-md-5">
+      <div class="form-header">
+        <p><span class="arrow"></span><a href="SignUp.html">Dont have an account? Sign Up</a></p>
+        <h3>NETWORTH</h3>
+        <P>Welcome! <br>You are steps away from your financial value</P>
+      </div>
+      <form name="regForm" action="" method="post" onsubmit="return validateForm()">
+        <div id="alert">
+          <p id="message"></p>
+        </div>
+
+        <div class="form-group">
+
+          <input type="email" name="email" placeholder="Email" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <input type="password" name="password" placeholder="Password" class="form-control">
+        </div>
+
+
+        <div class="form-group">
+        <!-- added forgot password -->
+          <a href="#">Forgot Password?</a>
+          <input type="submit" name="submit" value="Login" onclick="myFunction()" class="btn btn-primary">
+        </div>
+      </form>
+    </div>
   </div>
-  </main>
+
+  <div>
+    <script src="js/signUp.js"></script>
+  </div>
+
 </body>
 </html>
