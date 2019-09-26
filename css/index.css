@@ -11,6 +11,8 @@ body {
 	color: white !important;
 }
 
+
+
 .navbar-brand {
 	font-family: cursive;
 }
@@ -42,59 +44,13 @@ footer {
   	cursor: pointer;
 }
 
-.col-sm-8 {
-	background: url(../images/background.png);
-	border-right: 2px solid #F96D08;
-	color: black;
-}
-
-
-
-.reg-p {
-	text-align: left;
-	font-size: 18px;
-	font-family: courier;
-}
-
-.create-acc {
-	color: #fefefe;
-	text-shadow: #590e5e 1px 3px;
-	font-size: 45px;
-}
-
-#regForm a{
-	text-decoration: none;
-	color: #F96D08;
-}
-
-#regForm input {
-  width: 80%;
-  margin: 8px 0;
-  border: 1px solid #F96D08;
-  border-radius: 8px;
-  padding: 12px 20px;
-  font-family: serif;
-  font-weight: bold;
-
-}
-
-#regForm input[type=submit] {
-  background: #F96D08;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  padding: 14px 16px;
-  cursor: pointer;
-  letter-spacing: 2px;
-
-}
 
 
 #alert {
 	visibility: hidden;
 	min-width: 250px;
 	margin-left: -125px;
-	background-color: #F96D08;
+	background-color: #333;
 	color: #fff;
 	text-align: center;
 	border-radius: 2px;
