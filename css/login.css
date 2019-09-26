@@ -46,30 +46,24 @@ footer {
 	background: url(../images/background.png);
 	border-right: 2px solid #F96D08;
 	color: black;
+	padding-top: 5px;
 }
 
 
-
-.reg-p {
-	text-align: left;
-	font-size: 18px;
-	font-family: courier;
-}
-
-.create-acc {
+.login-acc {
 	color: #fefefe;
 	text-shadow: #590e5e 1px 3px;
 	font-size: 45px;
 }
 
-#regForm a{
+#loginForm a{
 	text-decoration: none;
 	color: #F96D08;
 }
 
-#regForm input {
+#loginForm input {
   width: 80%;
-  margin: 8px 0;
+  margin: 10px 0;
   border: 1px solid #F96D08;
   border-radius: 8px;
   padding: 12px 20px;
@@ -78,7 +72,7 @@ footer {
 
 }
 
-#regForm input[type=submit] {
+#loginForm input[type=submit] {
   background: #F96D08;
   border: none;
   border-radius: 8px;
@@ -94,7 +88,7 @@ footer {
 	visibility: hidden;
 	min-width: 250px;
 	margin-left: -125px;
-	background-color: #F96D08;
+	background-color: #333;
 	color: #fff;
 	text-align: center;
 	border-radius: 2px;
