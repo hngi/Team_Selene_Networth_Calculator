@@ -15,7 +15,7 @@
         <div class="container">
             <div class="navbar__contents">
                 <div class="navbar__logo">
-                    <h2>Networth</h2>
+                    <h2>Selena Networth Calculator Dashboard</h2>
                 </div>
                 <ul class="navbar__items">
                     <li><a href="/">Home</a></li>
@@ -52,7 +52,7 @@
                     <input type="text" placeholder="Search ..." name="search">
                 </form>
                <div class="top__right">
-                    <p>achillesusuoyibo@gmail.con</p>
+                    <!-- <p>achillesusuoyibo@gmail.con</p> -->
                     <a href="logout.php">Sign Out</a>
                </div>
             </div>
