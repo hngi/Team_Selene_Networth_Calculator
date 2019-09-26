@@ -23,8 +23,8 @@
             <form method="POST">
                 <h2>Sign in</h2>
                 
-                <input type="email"  name="email"  placeholder="Enter Email">
-                <input type="password" name="password" placeholder="Enter Password">
+                <input type="email"  name="email"  placeholder="Enter Email" required>
+                <input type="password" name="password" placeholder="Enter Password" required>
                 <input type="submit" value="Sign in" id="login-btn" name="login" class="btn btn-info">
                 <hr class="hr">
                 <p>Don't have an account? <a href="sign-up.php">Sign up</a></p>

@@ -22,12 +22,12 @@
         <div class="signup">
             <form method="POST">
                 <h2>Sign up</h2>
-                <input type="text" name="fname" placeholder="Enter Name">
-                <input type="text" name="username" placeholder="Enter Username">
-                <input type="email"  name="email"  placeholder="Enter Email">
-                <input type="password" name="password" placeholder="Enter Password">
-                <input type="password" name="conf_password" placeholder="Confirm Password">
-                <input type="submit" value="Signup"  name="signup" class="btn btn-info">
+                <input type="text" name="fname" placeholder="Enter Name" required>
+                <!-- <input type="text" name="username" placeholder="Enter Username"> -->
+                <input type="email"  name="email"  placeholder="Enter Email" required>
+                <input type="password" name="password" placeholder="Enter Password" required>
+                <input type="password" name="conf_password" placeholder="Confirm Password" required>
+                <input type="submit" value="Signup"  name="signup" class="btn btn-info" required>
                 <hr class="hr">
                 <p>Have an account? <a href="sign-in.php">Sign in</a></p>
             </form>
