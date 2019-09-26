@@ -60,7 +60,7 @@
                <li><a href="#">Bank Exchange Rate</a></li>
                <li><a href="#">Newsfeed</a></li>
                <li><a href="#">Support</a></li>
-               <li><a href="#">Sign Out</a></li>
+               <li><a href="logout.php">Sign Out</a></li>
            </ul>
         
         </div>

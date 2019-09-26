@@ -55,11 +55,11 @@ if(isset($_SESSION['user']))
 		  </div>
 
 		  <div class="col-sm-4">
-		  	<div align="right">
-					<span><img src="images/arrow1.png" width="40" height="35"><a href="signUp.php" style="color: #F96D08;"> Create account?</a></span>
+		  	<div style="text-align:center;">
+					<span>Don't have an account? <a href="index.php" style="color: #F96D08;font-weight:bold"> Signup </a></span>
 				</div>
 				<div align="center">
-					<h1 class="login-acc">Login</h1>
+					<h1 class="login-acc" style="color:#F96D08;">Login</h1>
 					<div >
 						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">To</h2></p>
 						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">Check</h2></p>
@@ -72,10 +72,10 @@ if(isset($_SESSION['user']))
 						<form name="loginForm" action="" method="post">
 
 						<div>
-							<input type="email" name="email" placeholder="Email">
+							<input type="email" name="email" placeholder="Email" required>
 						</div>
 						<div>
-							<input type="password" name="password" placeholder="Password">
+							<input type="password" name="password" placeholder="Password" required>
 						</div>
 
 						<div>
