@@ -55,13 +55,13 @@ if(isset($_SESSION['user']))
 		  </div>
 
 		  <div class="col-sm-4">
-		  	<div align="right">
-					<span><img src="images/arrow1.png" width="40" height="35"><a href="login.php" style="color: #F96D08;"> already have an account?</a></span>
+		  	<div style="text-align:center;">
+					<span> Already have an account?<a href="login.php" style="color: #F96D08;">Login</a></span>
 				</div>
-				<div align="center">
-					<h1 class="create-acc">Create Account</h1>
+				<div style="text-align:center;">
+					<h1 class="create-acc" style="color:#F96D08;">Create Account</h1>
 					<div>
-						<p class="reg-p">You are a step away from knowing your financial worth.</p>
+						<p class="reg-p" sty>You are a step away from knowing your financial worth.</p>
 					</div>
 					
 				</div>
@@ -71,23 +71,23 @@ if(isset($_SESSION['user']))
 						<p id="message"></p>
 					</div>
 					<div>
-						<input type="text" name="firstName" placeholder="First Name">
+						<input type="text" name="firstName" placeholder="First Name" required>
 					</div>
 
 					<div>
-						<input type="text" name="lastName" placeholder="Last Name">
+						<input type="text" name="lastName" placeholder="Last Name" required>
 					</div>
 
 					<div>
-						<input type="email" name="email" placeholder="Email">
+						<input type="email" name="email" placeholder="Email" required>
 					</div>
 
 					<div>
-						<input type="password" name="password" placeholder="Password">
+						<input type="password" name="password" placeholder="Password" required>
 					</div>
 
 					<div>
-						<input type="password" name="confirmPassword" placeholder="Confirm Password">
+						<input type="password" name="confirmPassword" placeholder="Confirm Password" required>
 					</div>
 
 					<div>
@@ -204,7 +204,6 @@ if(isset($_SESSION['user']))
 		          </a>
 
 		        </div>
-
 		      </div>
 
 		    </div>
@@ -251,9 +250,7 @@ if(isset($_SESSION['user']))
                 $file = fopen("data.json", "a");
                 fputs($file, "\r\nFirstname: ".$_POST["firstName"]. "Lastname: ".$_POST["lastName"]." Email: |".$_POST["email"]."| Password: |".$_POST["password"]."|");
                 fclose($file);
-
-                echo "<script> document.getElementById('success-message').innerHTML = 'Resgistration successful, Please <a href=login.php>login </a>'</script>";
-
+				header("Location: login.php");
             }
         }
         else
