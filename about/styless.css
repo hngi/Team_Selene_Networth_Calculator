@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:  'Segoe UI',  'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+body{
+    background:#02b8c8 ;
+}
+.contact-us{
+    width: 250px;
+    background: #fff;
+    padding:50px;
+    margin: 100px auto;
+    border-radius: 20px;
+    position: relative;
+}
+.title h3{
+clear: #535274;
+letter-spacing: 1px;
+margin-bottom: 25px;
+text-align: center;
+color: #02b8c8;
+}
+.form,
+.form-items{
+    width: 100%;
+}
+.form-items .input{
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    background:#e0dfdd;
+    border:0;
+    border-radius: 30px;
+
+}
+.form-items .input .message{
+    height: 125px;
+    border-radius: 15px;
+    margin-bottom:20px;
+    padding: 15px;
+    resize: none;
+}
+
+.btn{
+                background-color: #02b8c8;
+        border: none;
+        color: white;
+        padding: 15px 25px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        border: none;
+        border-radius: 15px;
+     }
+
+     .btn :hover{
+         background-color: rgb(55, 199, 209);
+     }
+    
+}
+
+.btn .fas{
+    margin-left:10px;
+    font-size: 12px;
+}
+.form-items{
+    position: relative;
+}
+.form-items .fas{
+    position: absolute;
+    top: 15px;
+    left:15px;
+    color: #9a99aa;
+}
+.social-icons{
+    position: absolute;
+    bottom:-25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    display:flex;
+    justify-content: space-around;
+}
+
+.social-icons div{
+    width:50px;
+    height:50px;
+    background: red;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+.social-icons div .fab{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+ }
+
+ .social-icons div.facebook{
+     background: #5178d9;
+ }
+
+ .social-icons div.twitter{
+    background: #41caf6;
+}
+.social-icons div.google{
+    background: #fb4f4f;
+}
