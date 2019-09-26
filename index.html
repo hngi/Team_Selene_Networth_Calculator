@@ -25,6 +25,11 @@ body{
 	text-align: center;
 	padding:5px 10px;
 }
+.header-right{
+	float: right;
+	text-align: center;
+	padding:5px 10px;
+}
 .top-header{
 	margin: 30px 50px 0 20px;
 	font-size: 18px;
@@ -35,6 +40,14 @@ body{
 	background: deepskyblue;
 	padding:5px 10px;
 	margin-left: 2px;
+	border-radius: 25px;
+}
+.signIn{
+	color: #fff;
+	background: deepskyblue;
+	padding:5px 10px;
+	margin-left: 2px;
+	margin-top: 10px;
 	border-radius: 25px;
 }
 .content-one{
@@ -97,17 +110,19 @@ body{
 }
 a{ 
 	text-decoration: none;
-	color: deepskyblue;
-	font-weight: bolder;
-	background: black;
-	opacity: 0.9;
-	padding: 10px 30px;
-	border-radius: 25px;
  }
  .get-started{
  	background: deepskyblue;
  	height: 50px;
  	padding-top: 20px;text-align: center;
+ }
+ .btn{
+ 	color: deepskyblue;
+	font-weight: bolder;
+	background: black;
+	opacity: 0.9;
+	padding: 10px 30px;
+	border-radius: 25px;
  }
 
  @media only screen and (max-width: 1150px){
@@ -132,7 +147,7 @@ a{
 	.blk{
 		width: 33.33%;
 	}
-}`
+}
 @media only screen and (max-width: 500px;){
 	.content-one{
 		background-size: 400px 600px;
@@ -152,6 +167,9 @@ a{
 				<div class="header-left">
 					<span>Net</span>
 					<span class="checker">Checker</span>
+				</div>
+				<div class="header-right">
+					<a href="#" class="signIn">Sign In</a>
 				</div>
 			</div>
 		</header>
@@ -193,7 +211,7 @@ a{
 				</div>
 			</div>
 			<div class="get-started">
-				<a href="#">GET STARTED</a>
+				<a href="#" class="btn">GET STARTED</a>
 			</div>
 		</main>
 	</body>
