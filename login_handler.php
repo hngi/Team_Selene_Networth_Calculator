@@ -6,7 +6,7 @@ if (isset($_POST["login"])) {
     $password      = filter_input(INPUT_POST,"password");
 
     if(login($email, $password)){
-        echo "<script>alert('login succesful');</script>";
+        header("Location: dashboard.php");
     }else{
         echo "<script>alert('failed login: enter correct email/password');</script>";
     }

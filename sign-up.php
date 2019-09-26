@@ -20,7 +20,7 @@
         </div> <!--end of nav div-->
 
         <div class="signup">
-            <form action="sign-in.php" method="POST">
+            <form method="POST">
                 <h2>Sign up</h2>
                 <input type="text" name="fname" placeholder="Enter Name">
                 <input type="text" name="username" placeholder="Enter Username">

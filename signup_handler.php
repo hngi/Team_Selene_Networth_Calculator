@@ -12,7 +12,7 @@ if (isset($_POST["signup"])) {
         echo "<script>alert('Password must match');</script>";
     }else{
         if(register_user($name, $email, $password)){
-            echo "<script>alert('registered');</script>";
+            header("Location: sign-in.php");
         }else{
             echo "<script>alert('registration failed');</script>";
             }

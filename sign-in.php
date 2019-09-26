@@ -20,7 +20,7 @@
         </div> <!--end of nav div-->
 
         <div class="signup">
-            <form action="dashboard.php" method="POST">
+            <form method="POST">
                 <h2>Sign in</h2>
                 
                 <input type="email"  name="email"  placeholder="Enter Email">
