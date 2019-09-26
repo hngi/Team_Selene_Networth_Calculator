@@ -2,7 +2,7 @@
     const worth = document.querySelector('.networth__wrapper');
     dashboard.style.display = "block";
     worth.style.display = "none";
-    
+  
 showDashboard = function(){
     const dashboard = document.querySelector('.dashboard__right__contents');
     const worth = document.querySelector('.networth__wrapper');
