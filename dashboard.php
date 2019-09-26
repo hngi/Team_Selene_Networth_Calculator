@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +21,8 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/">About Us</a></li>
                     <li><a href="/">Team</a></li>
-                    <li><a href="/">Sign Up</a></li>
-                    <li><a href="/">Login</a></li>
+                    <!-- <li><a href="/">Sign Up</a></li> -->
+                    <!-- <li><a href="logout.php">Log out</a></li> -->
                 </ul>
             </div>
         </div>
@@ -52,7 +53,7 @@
                 </form>
                <div class="top__right">
                     <p>achillesusuoyibo@gmail.con</p>
-                    <a href="">Sign Out</a>
+                    <a href="logout.php">Sign Out</a>
                </div>
             </div>
             <!--Dashboard
