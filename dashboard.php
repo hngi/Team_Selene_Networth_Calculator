@@ -13,8 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
     <title>Selene Networth - Dashboard</title>
 </head>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <div class="main__wrapper">
     <div class="navbar">
         <div class="container">
@@ -28,11 +27,10 @@
                     <li><a href="/">Team</a></li>
                     <!-- <li><a href="/">Sign Up</a></li> -->
                     <!-- <li><a href="logout.php">Log out</a></li> -->
-=======
+
 <body>
-=======
+
 <div class="main__wrapper">
->>>>>>> 2cf159c8f0c1f5bee5f327253ca04888904ffaca
     <div>
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#23C1CF;">
             <a class="navbar-brand" href="#">Selene</a>
@@ -43,7 +41,7 @@
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color:#23C1CF;">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-<<<<<<< HEAD
+
                   <li class="home-btn">
                     <a class="nav-link" href="index.php">Home</a>
                   </li>
@@ -54,8 +52,7 @@
                   <li class="nav-item">
                     <a class="nav-link" href="about.php">About Us</a>
                   </li>
->>>>>>> bb8c85dee19844144d5d5778bf5a034cdac058f2
-=======
+
                     <li class="home-btn">
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
@@ -66,7 +63,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="">About Us</a>
                     </li>
->>>>>>> 2cf159c8f0c1f5bee5f327253ca04888904ffaca
+
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search">
@@ -113,7 +110,7 @@
         </div>
         <div class="dashboard__right">
             <div class="top__wrapper">
-<<<<<<< HEAD
+
                 <form class="serach__form">
                     <i class="fa fa-search"></i>
                     <input type="text" placeholder="Search ..." name="search">
@@ -122,17 +119,12 @@
                     <!-- <p>achillesusuoyibo@gmail.con</p> -->
                     <a href="logout.php">Sign Out</a>
                </div>
-=======
-                
-<<<<<<< HEAD
-               
->>>>>>> bb8c85dee19844144d5d5778bf5a034cdac058f2
-=======
+=
                <div class="top__right">
                     <!-- <p>achillesusuoyibo@gmail.con</p> -->
                     <!-- <a href="logout.php">Sign Out</a> -->
                </div>
->>>>>>> 2cf159c8f0c1f5bee5f327253ca04888904ffaca
+
             </div>
             <!--Dashboard
             ===================-->
