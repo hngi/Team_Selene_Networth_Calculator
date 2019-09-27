@@ -119,40 +119,51 @@
                 <h3>Assets</h3>
                 <small>Having assets is what creates wealth. Your wealth is determined by how many assets you have.</small>
                 <div class="assets__card">
-                    <div class="assets__contents">
-                        <h5>Cash</h5>
-                <input type="text" id="cash">
-            </div>
-    <div class="assets__contents">
-            <h5>Businesses</h5>
-            <input type="text" id="business">
-        </div>
-        <div class="assets__contents">
-                <h5>Real Estate</h5>
-                <input type="text" id="estate">
-            </div>
-            <div class="assets__contents">
-                    <h5>Other Investments</h5>
-                    <input type="text" id="investment">
-                </div>
                 <div class="assets__contents">
-                        <h5>Retirement Savings</h5>
-                        <input type="text" id="savings">
+                        <h5>Cash</h5>
+                        <input type="number" id="cash">
                     </div>
+
                     <div class="assets__contents">
-                            <h5>Life Insurance</h5>
-                            <input type="text" id="insurance">
-                        </div>
-                        <div class="assets__contents">
-                                <h5>Property</h5>
-                                <input type="text" id="property">
-                            </div><br />
-                            <div class="assets__contents">
-                                    <button class="calculate__btn">Calculate Total</button>
-                                    <input type="text" id="total">
-                                </div>
+                        <h5>Businesses</h5>
+                        <input type="number" id="business">
+                    </div>
+
+                    <div class="assets__contents">
+                        <h5>Real Estate</h5>
+                        <input type="number" id="realEstate">
+                    </div>
+
+                    <div class="assets__contents">
+                        <h5>Other Investments</h5>
+                        <input type="number" id="otherInvestments">
+                    </div>
+
+                    <div class="assets__contents">
+                        <h5>Retirement Savings</h5>
+                        <input type="number" id="retirementSavings">
+                    </div>
+
+                    <div class="assets__contents">
+                        <h5>Life Insurance</h5>
+                        <input type="number" id="lifeInsurance">
+                    </div>
+                    
+                    <div class="assets__contents">
+                        <h5>Property</h5>
+                        <input type="number" id="property">
+                    </div><br />
+                    
+                    <div class="assets__contents">
+                        <button type="button " id="calculate" onclick="calculateAsset()">Calculate Total</button>
+                        
+                        <input id="showTotal"  disabled>
+                    </div>
                 </div>
-            </div> -->
+
+            </div>
+
+
             <!--End of Assets
             ======================-->
             <!--Laiability section begins here
@@ -162,18 +173,21 @@
                     <h3>Liabilities</h3>
                     <small>These are the things that takes money away from you. Try to limit them.</small>
                     <div class="liabilities__card">
-                            <div class="liability__contents">
-                                    <h5>Debts</h5>
-                                    <input type="text" id="property">
-                                </div>
-                                <div class="liability__contents">
-                                        <h5>Bills Due</h5>
-                                        <input type="text" id="property">
-                                    </div><br />
-                                <div class="liability__contents">
-                                        <button class="liabilities__btn">Calculate Total</button>
-                                        <input type="text" id="total">
-                                    </div>
+                    <div class="liability__contents">
+                            <h5>Debts</h5>
+                            <input type="text"  id="debts">
+                        </div>
+
+                        <div class="liability__contents">
+                            <h5>Bills Due</h5>
+                            <input type="text" id="billsDue">
+                        </div><br />
+                        <div class="liability__contents">
+                        <button class="liabilities__btn" id="calculateToTal" onclick="calculateLiabilities()">Calculate Total</button>
+                       
+
+                        <input id="showTotalLiabilities"  disabled>
+                        </div>
                     </div>
             </div> -->
             <!--End of Lability section
@@ -189,57 +203,76 @@
                         <h3 style="font-weight:bold">Assets</h3>
                         <div class="cash">
                             <label for="cash">Cash</label><br />
-                            <input type="text" id="cash" placeholder="&#8358; 00.00" name="cash">
+
+                            <input type="number" id="cash" placeholder="&#8358; 00.00">
                         </div>
+
                         <div class="business">
                             <label for="cash">Business</label><br />
-                            <input type="text" id="business" placeholder="&#8358; 00.00" name="business">
+                            <input type="number" id="business" placeholder="&#8358; 00.00">
+
                         </div>
+
                         <div class="extate">
-                                <label for="cash">Real Estate</label><br />
-                                <input type="text" id="estate" placeholder="&#8358; 00.00" name="real_estate">
-                            </div>
-                            <div class="investments">
-                                    <label for="cash">Other Investments</label><br />
-                                    <input type="text" placeholder="&#8358; 00.00" name="investments">
-                                </div>
-                                <div class="savings">
-                                        <label for="cash">Retirement Savings</label><br />
-                                        <input type="text" placeholder="&#8358; 00.00" name="savings">
-                                    </div>
-                                    <div class="insurance">
-                                            <label for="cash">Life Insurance</label><br />
-                                            <input type="text" placeholder="&#8358; 00.00" name="insurance">
-                                        </div>
-                                        <div class="property">
-                                                <label for="cash">Property</label><br />
-                                                <input type="text" placeholder="&#8358; 00.00" name="property">
-                                            </div>
-                                            <div class="total">
-                                                    <label for="cash">Total</label><br />
-                                                    <input type="text" placeholder="&#8358; 00.00" name="asset__total" class="total__input">
-                                                </div>
-                            </div>
+
+                            <label for="cash">Real Estate</label><br />
+                            <input type="number" id="realEstate" placeholder="&#8358; 00.00">
+                        </div>
+                            
+                        <div class="investments">
+                            <label for="cash">Other Investments</label><br />
+                            <input type="number" id="otherInvestments" placeholder="&#8358; 00.00">
+                        </div>
+
+                        <div class="savings">
+                            <label for="cash">Retirement Savings</label><br />
+                            <input type="number" placeholder="&#8358; 00.00" name="savings" id="retirementSavings">
+                        
+                        </div>
+                        
+                        <div class="insurance">
+                            <label for="cash">Life Insurance</label><br />
+                            <input type="number" placeholder="&#8358; 00.00" id="lifeInsurance" >
+                            
+                        </div>
+                        
+                        <div class="property">
+                            <label for="cash">Property</label><br />
+                            <input type="number" placeholder="&#8358; 00.00" id="property">
+                        </div>
+                        
+                        <div class="total">
+                            <label for="cash">Total</label><br />
+                            <h3 id="showNetAsset"></h3>
+                        </div>
+                    </div>
+
                     <div class="liability__form">
-                        <h3 style="font-weight:bold">Liabilities</h3>
+                    <h3 style="font-weight:bold">Liabilities</h3>
                         <div class="debt">
                             <label for="debt">Debt</label>
-                            <input type="text" placeholder="&#8358; 00.00" name="debt">
+                            <input type="number" placeholder="&#8358; 00.00" id="debt">
                         </div>
                         <div class="bills">
-                                <label for="debt">Bills</label>
-                                <input type="text" placeholder="&#8358; 00.00" name="debt">
-                            </div>
-                            <div class="total">
-                                    <label for="debt">Total</label>
-                                    <input type="text" placeholder="&#8358; 00.00" name="liability__total" class="total__input">
-                                </div>
-                                <button class="calculate__btn" onclick="calculate()">Calculate</button>
-                                <div class="result">
-                                <h4>Your Networth is</h4>
-                                <p id="answer"></p>
-                                </div>
+
+                            <label for="debt">Bills Due</label>
+                            <input type="number" placeholder="&#8358; 00.00" id="billsDue">
                         </div>
+                        
+                        <div class="total">
+                            <label for="debt">Total</label>
+                            <h3 id="showNetLiabilities"></h3>
+                        </div>
+                        
+                        <button type="button" class="calculate__btn" id="calculateNet" onclick="calculateNetWorth()">Calculate</button>
+                
+                        
+                        <div class="result">
+                            <h4>Your Networth is</h4>
+                            <input id="showNetWorth" disabled>
+                        </div>
+                  </div>
+
                 </div>
                 </div>
             </div>
@@ -343,15 +376,17 @@
 
         </div>
     </div>
-    <div class="footer-copyright text-center py-3">&#169; 2019 Team Selene
+
+    
+    <div>
+        <script src="js/dashboard.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="functionAssetLi.js"></script>
+
     </div>
 
 </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-</script>
-<script src="dashboard.js"></script>
-<!-- <script src="js/dashboard_functions.js"></script> -->
-<script src="functionLiabilities.js"></script>
 </body>
 </html>
