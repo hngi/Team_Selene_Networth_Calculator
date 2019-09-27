@@ -1,7 +1,10 @@
-
+* {
+	box-sizing: border-box;
+	
+}
 body {
 	min-height: 100vh;
-	min-width: 100vw;
+	min-width: 90vw;
 	overflow-x: hidden;	
 }
 
@@ -26,14 +29,14 @@ footer {
 
 .footer-contact input{
   	margin: 8px 0;
-  	border: #F96D08;
+  	border: #23C1CF;
   	border-radius: 8px;
   	padding: 10px 20px;
   	font-family: serif;
 }
 
 .footer-contact input[type=submit]{
-	background: #F96D08;
+	background: #23C1CF;
   	border: none;
   	border-radius: 8px;
   	color: white;
@@ -42,33 +45,27 @@ footer {
 
 .col-sm-8 {
 	background: url(../images/background.png);
-	border-right: 2px solid #F96D08;
+	border-right: 2px solid #23C1CF;
 	color: black;
+	padding-top: 5px;
 }
 
 
-
-.reg-p {
-	text-align: left;
-	font-size: 18px;
-	font-family: courier;
-}
-
-.create-acc {
+.login-acc {
 	color: #fefefe;
 	text-shadow: #590e5e 1px 3px;
 	font-size: 45px;
 }
 
-#regForm a{
+#loginForm a{
 	text-decoration: none;
-	color: #F96D08;
+	color: #23C1CF;
 }
 
-#regForm input {
+#loginForm input {
   width: 80%;
-  margin: 8px 0;
-  border: 1px solid #F96D08;
+  margin: 10px 0;
+  border: 1px solid #23C1CF;
   border-radius: 8px;
   padding: 12px 20px;
   font-family: serif;
@@ -76,8 +73,8 @@ footer {
 
 }
 
-#regForm input[type=submit] {
-  background: #F96D08;
+#loginForm input[type=submit] {
+  background: #23C1CF;
   border: none;
   border-radius: 8px;
   color: white;
@@ -92,7 +89,7 @@ footer {
 	visibility: hidden;
 	min-width: 250px;
 	margin-left: -125px;
-	background-color: #F96D08;
+	background-color: #333;
 	color: #fff;
 	text-align: center;
 	border-radius: 2px;

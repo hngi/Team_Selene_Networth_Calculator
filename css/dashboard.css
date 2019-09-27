@@ -1,24 +1,115 @@
-*{
-    margin: 0;
+* {
+	margin: 0;
     padding:0;
     box-sizing: border-box;
+	
 }
+body {
+	min-height: 100vh;
+	min-width: 100vw;
+	overflow-x: hidden;
+    line-height: 1.4;
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+}
+
+.navbar a {
+	color: white !important;
+}
+
+
+
+.navbar-brand {
+	font-family: cursive;
+}
+
+footer {
+	background: #2c3645; 
+	padding-top: 5px;
+	color: white;
+}
+
+.img-foot img {
+	width: 30px;
+	height: 30px;
+}
+
+.footer-contact input{
+  	margin: 8px 0;
+  	border: #F96D08;
+  	border-radius: 8px;
+  	padding: 10px 20px;
+  	font-family: serif;
+}
+
+.footer-contact input[type=submit]{
+	background: #F96D08;
+  	border: none;
+  	border-radius: 8px;
+  	color: white;
+  	cursor: pointer;
+}
+
+
+
+#alert {
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 10px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+	border-radius: 5px;
+	}
+
+#alert.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@media screen and (max-width: 500px) {
+body {
+	min-height: 100vh;
+	min-width: 100vw;
+	 
+}
+
+}
+/*New UPDATE STARTS FROM HERE (ACHILLIS CODE)
+*/
+
 ul{
     list-style: none;
 }
-body{
-    overflow-x: hidden;
-    line-height: 1.4;
-    font-family: 'Lato', sans-serif;
-    height: 100vh;
-}
-.navbar{
-    background: #fafafa;
-    /* position: fixed; */
-    z-index: 100;
-    width: 100%;
-    padding: .8rem 0;
-}
+
 .container{
     max-width: 1100px;
     margin: 0 auto;
@@ -74,25 +165,23 @@ body{
 .top__wrapper{
     display: flex;
     justify-content: space-between;
+    background: #e8e8e8;
+    padding: .08rem 0;
 }
 .serach__form{
     background: #fafafa;
-    max-width: 500px;
+    max-width: 400px;
     display: flex;
     justify-content: space-between;
     padding: .8rem 2rem;
 }
 .serach__form input[type=text]{
-    width: 500px;
+    max-width: 500px;
     border:none;
     background:transparent;
     outline: none;
     font-size: 1.1rem;
     color:#4A5254;
-}
-.top__wrapper{
-    background: #e8e8e8;
-    padding: .08rem 0;
 }
 .fa-search{
     color:#4A5254;
@@ -109,19 +198,35 @@ body{
 .top__right a{
     text-decoration: none;
     font-size: .9rem;
-    background: #BFEEF7;
+    background: #23C1CF;
     padding: .6rem 2rem;
     font-weight: bold;
-    color:#4A5254;
+    color:#fff;
     border-radius: 4px;
 }
     
     .dashboard__right__contents{
         margin: 2rem;
+        height: 100%;
+    }
+    .openbars{
+        display: none;
     }
     .dashboard__right__contents h3{
         padding-bottom: .5rem;
         color:#4A5254;
+    }
+    .dashboard__btn{
+        background: #23C1CF;
+        padding: 1rem 3rem;
+        text-decoration: none;
+        border:none;
+        cursor: pointer;
+        color:#333;
+
+        font-weight: bold;
+        border-radius: 4px;
+        margin-bottom: 25rem;
     }
     small{
         color:#4A5254;
@@ -137,6 +242,8 @@ body{
     .financial__card{
         padding:2.5rem 3rem;
         box-shadow: 0px 0px 3px rgba(0,0,0,.17);
+        background: #fafafa;
+        border-radius: 4px;
     }
     .financial__card h4{
         padding-bottom: .7rem;
@@ -174,11 +281,11 @@ body{
         color:#4A5254;
     }
     .calculate__btn, .liabilities__btn{
-        background: #BFEEF7;
+        background: #23C1CF;
         border:none;
         padding: .6rem 3rem;
         cursor: pointer;
-        color:#4A5254;
+        color:#fff;
         font-weight: bold;
         font-size: .9rem;
     }
@@ -229,7 +336,7 @@ body{
         color:#4A5254;
     }
     .total__input{
-        background: #BFEEF7;
+        background: #23C1CF;
         border:0px;
     }
     .result{
@@ -242,4 +349,79 @@ body{
     }
     .result p{
         color:#4A5254;
+    }
+
+
+    /*MEDIA QUERIES*/
+    @media only screen and (max-width: 990px){
+        .dashboard__wrapper{
+            background: #f4f4f4;
+            grid-template-columns: 1fr;
+        }
+       .dashboard__left{
+           display: none;
+           position: absolute;
+           z-index: 200;
+           width: 70%;
+           top: 6.4%;
+           height: 100%;
+       } 
+       .serach__form{
+           visibility: hidden;
+       }
+       .top__wrapper{
+           width: 100% !important;
+           justify-content: space-between;
+       }
+       .serach__form{
+        max-width: 10px;
+    }
+    .top__right{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    .financial__info{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 30px;
+        margin-top: 3rem;
+    }
+    .top__right a{
+        padding: .6rem .8rem;
+    }
+    .dashboard__right__contents{
+        margin: 2rem;
+    }
+    .networth__content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        margin-top: 2rem;
+    }
+    .assets__form{
+        border-right: none;
+    }
+    .dashboard__right__contents h3{
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+    .financial__card{
+        padding:2rem 3rem;
+    }
+    .profile-img{
+        width: 90px;
+    }
+    .openbars{
+        cursor: pointer !important;
+        color:#4A5254;
+        font-size: 1.2rem;
+        display: block;
+    }
+    .hide__sidebar{
+        display: none !important;
+    }
+    .liabilities__wrapper, .networth__wrapper{
+        height: 100%;
+    }
     }

@@ -18,7 +18,7 @@ function validateForm() {
 	}
 
 	if (firstName.length <= 1 || lastName.length <= 1) {
-		myFunction('Name must be morethan 2 characters!')
+		myFunction('Name must be more than 2 characters!')
 		return false
 	}
 
@@ -40,6 +40,5 @@ function validateForm() {
 	if (password === "" || confirmPassword === "") {
 		myFunction('Password fields are required')
 		return false
-	}
-	
+	}	
 }

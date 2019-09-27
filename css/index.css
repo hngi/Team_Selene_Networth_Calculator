@@ -1,100 +1,100 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    font-family: Montserrat;
-    text-decoration: none;
+* {
+	box-sizing: border-box;
+	
 }
-
 body {
-    min-height: 100vh;
-    background-image: linear-gradient(120deg,#FFFFFF, #999999,#454545);
-    
+	min-height: 100vh;
+	min-width: 100vw;
+	overflow-x:hidden;	
 }
 
-
-.nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 80px;
-  
-}
-
-
-.logo{
-    float: left;
-    font-size: 30px;
-    line-height: 80px;
-    padding: 0 4em;
-    letter-spacing: 1.2px;
-}
-
-.logo a{
-    
-    color: rgb(32, 114, 24);
-
-}
-
-.logo a:hover{
-    
-    color: rgb(92, 201, 70);
+.navbar a {
+	color: white !important;
 }
 
 
 
-.header {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-40%, -50%);
-    text-align: center;
+.navbar-brand {
+	font-family: cursive;
 }
 
-.header h2 {
-    color: rgb(199, 206, 198);
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    font-family: 'Source Sans Pro', sans-serif;
-
+footer {
+	background: #2c3645; 
+	padding-top: 5px;
+	color: white;
 }
 
-.header p {
-    color: #c2ba90;
-    font-weight: lighter;
-    font-size: 20px;
-    margin: 0 0 60px;
+.img-foot img {
+	width: 30px;
+	height: 30px;
+}
+
+.footer-contact input{
+  	margin: 8px 0;
+  	border: #F96D08;
+  	border-radius: 8px;
+  	padding: 10px 20px;
+  	font-family: serif;
+}
+
+.footer-contact input[type=submit]{
+	background: #F96D08;
+  	border: none;
+  	border-radius: 8px;
+  	color: white;
+  	cursor: pointer;
 }
 
 
-.header a {
-    text-decoration: none;
-    margin-top: 10px;
-  font-family: Montserrat;
-  font-size: 16px;
-  color:rgb(207, 235, 202);
-  background: rgb(48, 209, 33);
-  border: none;
-  padding: 7px 30px;
-  border-radius: 4px;
-  cursor: pointer;
-  
+
+#alert {
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 10px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+	border-radius: 5px;
+	}
+
+#alert.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-.header .second {
-    background: none;
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
 }
 
-.header .second:hover {
-    background:none;
-    color: rgb(32, 114, 24);
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
 }
 
-.header a:hover {
-    color: rgb(207, 235, 202);
-    background: rgb(32, 114, 24);
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@media screen and (max-width: 500px) {
+body {
+	min-height: 100vh;
+	min-width: 100vw;
+	 
+}
+
 }
