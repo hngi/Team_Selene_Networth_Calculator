@@ -74,7 +74,10 @@ function calculateLiabilities(){
 
      let netWorth = finalAssets - finalLiabilities;
       netWorth = netWorth.toFixed(2);
+      if (!isNaN(netWorth)) {
      document.getElementById('showNetWorth').innerHTML = "N"+ netWorth;
+      
+      }
       return calculateNetWorth;
     
   }
