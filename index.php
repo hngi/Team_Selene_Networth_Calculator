@@ -61,7 +61,7 @@ if(isset($_SESSION['user']))
 				<div style="text-align:center;">
 					<h1 class="create-acc" style="color:#F96D08;">Create Account</h1>
 					<div>
-						<p class="reg-p" sty>You are a step away from knowing your financial worth.</p>
+						<p class="reg-p">You are a step away from knowing your financial worth.</p>
 					</div>
 					
 				</div>

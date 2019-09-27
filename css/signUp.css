@@ -10,7 +10,7 @@ body {
 }
 
 .navbar-brand {
-	font-family: cursive;
+	font-weight: bold;
 }
 
 footer {
@@ -49,9 +49,9 @@ footer {
 
 
 .reg-p {
-	text-align: left;
+	text-align: center;
 	font-size: 18px;
-	font-family: courier;
+	
 }
 
 .create-acc {
