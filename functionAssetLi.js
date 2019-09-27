@@ -17,7 +17,7 @@ function calculateAsset(){
     //quick validation
     if(cash === "" || business === "" || realEstate === "" || otherInvestments === "" || retirementSavings === "" || lifeInsurance === "" || property === "") {
 
-        alert("To calculate assets, provide values for all input fields");
+        alert("Provide values for all input fields");
         return;
     }
     // Maths: calculate the inputs
@@ -28,7 +28,7 @@ function calculateAsset(){
     totalAsset = totalAsset.toFixed(2);
 
         // display totalAsset 
-    document.getElementById('showTotal').value = "N" + totalAsset;
+    document.getElementById('showNetAsset').innerHTML = "N" + totalAsset;
 
          return totalAsset;
 
@@ -39,7 +39,7 @@ function calculateAsset(){
 function calculateLiabilities(){
     // store value of each individual input
 
-    let debts = document.getElementById('debts').value;
+    let debts = document.getElementById('debt').value;
     let billsDue = document.getElementById('billsDue').value;
 
      
@@ -49,7 +49,7 @@ function calculateLiabilities(){
     //quick validation
     if(debts === "" || billsDue === "") {
 
-        alert("To calculate liabilities, provide values for all input fields");
+        alert("Provide values for all input fields");
         return;
     }
     // Maths: calculate the inputs
@@ -57,7 +57,7 @@ function calculateLiabilities(){
        
         totalLiabilities = totalLiabilities.toFixed(2);
 
-        document.getElementById('showTotalLiabilities').value = "N" + totalLiabilities;
+    document.getElementById('showNetLiabilities').innerHTML = "N" + totalLiabilities;
         
 
     return totalLiabilities;
@@ -73,7 +73,9 @@ function calculateLiabilities(){
      let finalLiabilities = calculateLiabilities();
 
      let netWorth = finalAssets - finalLiabilities;
-     document.getElementById('showNetWorth').value = "N"+ netWorth;
+      netWorth = netWorth.toFixed(2);
+     document.getElementById('showNetWorth').innerHTML = "N"+ netWorth;
+      return calculateNetWorth;
     
   }
 

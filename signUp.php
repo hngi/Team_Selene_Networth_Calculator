@@ -30,7 +30,7 @@ if(isset($_SESSION['user']))
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
 
-			  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			  <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color:#23C1CF">
 			    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 			      <li class="nav-item active">
 			        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
@@ -59,7 +59,7 @@ if(isset($_SESSION['user']))
 					<span> Already have an account?<a href="login.php" style="color: #F96D08;">Login</a></span>
 				</div>
 				<div style="text-align:center;">
-					<h1 class="create-acc" style="color:#F96D08;">Create Account</h1>
+					<h1 class="create-acc" style="color:#23C1CF;">Create Account</h1>
 					<div>
 						<p class="reg-p" sty>You are a step away from knowing your financial worth.</p>
 					</div>
