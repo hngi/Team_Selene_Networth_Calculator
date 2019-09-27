@@ -224,7 +224,7 @@ if(isset($_SESSION['user']))
         if(isset($_POST["submit"]))
         {
             // check if user exist.
-            $file = fopen("data.json","r");
+            $file = fopen("data.php","r");
             $findemail = false;
             while(!feof($file))
             {
@@ -247,7 +247,7 @@ if(isset($_SESSION['user']))
 
             else
             {
-                $file = fopen("data.json", "a");
+                $file = fopen("data.php", "a");
                 fputs($file, "\r\nFirstname: ".$_POST["firstName"]. "Lastname: ".$_POST["lastName"]." Email: |".$_POST["email"]."| Password: |".$_POST["password"]."|");
                 fclose($file);
 				header("Location: login.php");
