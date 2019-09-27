@@ -137,7 +137,7 @@
                     <div class="assets__contents">
                         <button type="button " id="calculate" onclick="calculateAsset()">Calculate Total</button>
                         
-                        <h3 id="showTotal"></h3>
+                        <input id="showTotal"  disabled>
                     </div>
                 </div>
             </div>
@@ -163,7 +163,7 @@
                         <button class="liabilities__btn" id="calculateToTal" onclick="calculateLiabilities()">Calculate Total</button>
                        
 
-                        <h3 id="showTotalLiabilities"></h3>
+                        <input id="showTotalLiabilities"  disabled>
                         </div>
                     </div>
             </div>

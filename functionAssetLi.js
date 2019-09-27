@@ -22,7 +22,7 @@ function calculateAsset(){
         totalAsset = totalAsset.toFixed(2);
 
         // display totalAsset 
-        document.getElementById('showTotal').innerHTML = "N"+ totalAsset;
+        document.getElementById('showTotal').value = "N"+ totalAsset;
 
 }
 
@@ -42,8 +42,8 @@ function calculateLiabilities(){
     var totalLiabilities =  parseFloat(debts) + parseFloat(billsDue);
        
         totalLiabilities = totalLiabilities.toFixed(2);
-        
-        document.getElementById('showTotalLiabilities').innerHTML = "N"+totalLiabilities;
+
+        document.getElementById('showTotalLiabilities').value = "N"+totalLiabilities;
     
 }
 
