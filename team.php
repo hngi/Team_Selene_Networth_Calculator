@@ -49,6 +49,54 @@
 			</nav>
 		</div>
 		
+		<main>
+			<section id="team-wrapper">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-5 col-md-5 col-sm-5 col-12">
+							<div>
+								<video controls>
+								    <source src="movie.mp4" type="video/mp4">
+								    <source src="movie.ogg" type="video/ogg">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7 col-12">
+							<div>
+								<h4>Networth Checker is known for its accuracy, by combining some parameters such as assets, liability. Send your networth in 3 minutes. <br><br> It is simply a calculation of what you owe subtracted from what you own.</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2 class="text-center">Meet Our Team</h2>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+								<div class="text-center">
+									<img src="https://res.cloudinary.com/shakirah/image/upload/v1523834950/shakira.jpg" class="img-fluid img-circle" alt="">
+									<h3>Software Developer</h3>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+								<div class="text-center">
+									<img src="https://res.cloudinary.com/shakirah/image/upload/v1523834950/shakira.jpg" class="img-fluid img-circle" alt="">
+									<h3>Software Developer</h3>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+								<div class="text-center">
+									<img src="https://res.cloudinary.com/shakirah/image/upload/v1523834950/shakira.jpg" class="img-fluid img-circle" alt="">
+									<h3>Software Developer</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
 		<footer class="page-footer font-small unique-color-dark">
 		  <div class="container text-center text-md-left mt-5">
 
@@ -146,6 +194,7 @@
 
 		</footer>
 	</div>
+
 
 	<div>
 		<script src="js/signUp.js"></script>

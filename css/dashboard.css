@@ -10,7 +10,7 @@ body {
 	overflow-x: hidden;
     line-height: 1.4;
     font-family: 'Lato', sans-serif;
-    height: 100vh;
+    height: 100%;
 }
 
 .navbar a {
@@ -165,25 +165,23 @@ ul{
 .top__wrapper{
     display: flex;
     justify-content: space-between;
+    background: #e8e8e8;
+    padding: .08rem 0;
 }
 .serach__form{
     background: #fafafa;
-    max-width: 500px;
+    max-width: 400px;
     display: flex;
     justify-content: space-between;
     padding: .8rem 2rem;
 }
 .serach__form input[type=text]{
-    width: 500px;
+    max-width: 500px;
     border:none;
     background:transparent;
     outline: none;
     font-size: 1.1rem;
     color:#4A5254;
-}
-.top__wrapper{
-    background: #e8e8e8;
-    padding: .08rem 0;
 }
 .fa-search{
     color:#4A5254;
@@ -200,7 +198,7 @@ ul{
 .top__right a{
     text-decoration: none;
     font-size: .9rem;
-    background: #BFEEF7;
+    background: #23C1CF;
     padding: .6rem 2rem;
     font-weight: bold;
     color:#4A5254;
@@ -209,10 +207,25 @@ ul{
     
     .dashboard__right__contents{
         margin: 2rem;
+        height: 100%;
+    }
+    .openbars{
+        display: none;
     }
     .dashboard__right__contents h3{
         padding-bottom: .5rem;
         color:#4A5254;
+    }
+    .dashboard__btn{
+        background: #23C1CF;
+        padding: 1rem 3rem;
+        text-decoration: none;
+        border:none;
+        cursor: pointer;
+        color:#333;
+        font-weight: bold;
+        border-radius: 4px;
+        margin-bottom: 25rem;
     }
     small{
         color:#4A5254;
@@ -228,6 +241,8 @@ ul{
     .financial__card{
         padding:2.5rem 3rem;
         box-shadow: 0px 0px 3px rgba(0,0,0,.17);
+        background: #fafafa;
+        border-radius: 4px;
     }
     .financial__card h4{
         padding-bottom: .7rem;
@@ -265,7 +280,7 @@ ul{
         color:#4A5254;
     }
     .calculate__btn, .liabilities__btn{
-        background: #BFEEF7;
+        background: #23C1CF;
         border:none;
         padding: .6rem 3rem;
         cursor: pointer;
@@ -320,7 +335,7 @@ ul{
         color:#4A5254;
     }
     .total__input{
-        background: #BFEEF7;
+        background: #23C1CF;
         border:0px;
     }
     .result{
@@ -336,4 +351,76 @@ ul{
     }
 
 
-
+    /*MEDIA QUERIES*/
+    @media only screen and (max-width: 990px){
+        .dashboard__wrapper{
+            background: #f4f4f4;
+            grid-template-columns: 1fr;
+        }
+       .dashboard__left{
+           display: none;
+           position: absolute;
+           z-index: 200;
+           width: 70%;
+           top: 6.4%;
+           height: 100%;
+       } 
+       .serach__form{
+           visibility: hidden;
+       }
+       .top__wrapper{
+           width: 100% !important;
+           justify-content: space-between;
+       }
+       .serach__form{
+        max-width: 10px;
+    }
+    .top__right{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    .financial__info{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 30px;
+        margin-top: 3rem;
+    }
+    .top__right a{
+        padding: .6rem .8rem;
+    }
+    .dashboard__right__contents{
+        margin: 2rem;
+    }
+    .networth__content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        margin-top: 2rem;
+    }
+    .assets__form{
+        border-right: none;
+    }
+    .dashboard__right__contents h3{
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+    .financial__card{
+        padding:2rem 3rem;
+    }
+    .profile-img{
+        width: 90px;
+    }
+    .openbars{
+        cursor: pointer !important;
+        color:#4A5254;
+        font-size: 1.2rem;
+        display: block;
+    }
+    .hide__sidebar{
+        display: none !important;
+    }
+    .liabilities__wrapper, .networth__wrapper{
+        height: 100%;
+    }
+    }
