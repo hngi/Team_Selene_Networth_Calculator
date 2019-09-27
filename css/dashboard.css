@@ -222,7 +222,8 @@ ul{
         text-decoration: none;
         border:none;
         cursor: pointer;
-        color:#fff;
+        color:#333;
+
         font-weight: bold;
         border-radius: 4px;
         margin-bottom: 25rem;
