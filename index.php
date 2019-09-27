@@ -36,10 +36,10 @@ if(isset($_SESSION['user']))
 			        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="">Our Team</a>
+			        <a class="nav-link" href="#">Our Team</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="">About Us</a>
+			        <a class="nav-link" href="#">About Us</a>
 			      </li>
 			    </ul>
 			    <form class="form-inline my-2 my-lg-0">
