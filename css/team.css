@@ -69,6 +69,35 @@ footer {
 	animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
+/* CSS BY SHAKIRA */
+#team-wrapper {
+	padding: 70px 0;
+}
+#team-wrapper .container-fluid {
+	width: 96%;
+}
+#team-wrapper video {
+	max-width: 100%;
+	border: 2px solid #f96d08;
+}
+#team-wrapper h4 {
+	width: 70%;
+}
+#team-wrapper h2 {
+	margin: 70px 0 50px 0;
+	border: 2px solid #f96d08;
+	padding: 10px 0 20px 0;
+}
+#team-wrapper img {
+	width: 50%;
+	margin-bottom: 30px;
+}
+#team-wrapper .img-circle {
+	border-radius: 50%;
+}
+
+/* ENDS HERE */
+
 @-webkit-keyframes fadein {
   from {bottom: 0; opacity: 0;} 
   to {bottom: 30px; opacity: 1;}
