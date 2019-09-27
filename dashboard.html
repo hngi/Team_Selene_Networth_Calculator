@@ -7,25 +7,25 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/dashboard.css">
-    <title>Document</title>
+    <title>Selene Networth - Dashboard</title>
 </head>
 <div class="main__wrapper">
-    <div class="navbar">
+    <!-- <div class="navbar">
         <div class="container">
             <div class="navbar__contents">
                 <div class="navbar__logo">
-                    <h2>Networth</h2>
+                    <h2>Selene Networth</h2>
                 </div>
                 <ul class="navbar__items">
-                    <li><a href="/">Home</a></li>
-<!--                     <li><a href="/">About Us</a></li>
+                     <li><a><small>. . . Take control of your assets and liabilities and get a sense of your financial worth!</small></a></li>
+                    <li><a href="/">About Us</a></li>
                     <li><a href="/">Team</a></li>
                     <li><a href="/">Sign Up</a></li> -->
-                    <li><a href="/">Log Out</a></li>
+                    <!-- <li><a href="index.html">Log Out</a></li> -->
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--End of Navbar
     ==========================-->
     <!--Dashboard starts here
@@ -35,10 +35,10 @@
             <img src="./assets/profile1.png" class="profile-img" alt="">
            <ul>
                <li><a href="#" onclick="showDashboard()">Dashboard</a></li>
-               <li><a href="#" onclick="showAssets()">Assets</a></li>
-               <li><a href="#" onclick="showLiabilities()">Liabilities</a></li>
+               <!-- <li><a href="#" onclick="showAssets()">Assets</a></li>
+               <li><a href="#" onclick="showLiabilities()">Liabilities</a></li> -->
                <li><a href="#" onclick="showWorth()">Networth Calculator</a></li>
-<!--                <li><a href="#">Bank Exchange Rate</a></li>
+               <!-- <li><a href="#">Bank Exchange Rate</a></li>
                <li><a href="#">Newsfeed</a></li>
                <li><a href="#">Support</a></li> -->
            </ul>
@@ -58,8 +58,9 @@
             <!--Dashboard
             ===================-->
             <div class="dashboard__right__contents">
+                    <i class="fa fa-bars openbars" onclick="showDashboardLeft()"></i>
                 <h3>Welcome Back</h3>
-                <small>Take control of your assets and liabilities and get a sense of your financial worth!</small>
+                <!-- <small>Take control of your assets and liabilities and get a sense of your financial worth!</small> -->
                 <div class="financial__info">
                     <div class="financial__card assets">
                         <h4>Total Assets</h4>
@@ -73,13 +74,15 @@
                                 <h4>Total Assets</h4>
                                 <p>&#8358; 00.00</p>
                             </div>
-                </div>
+                </div><br />
+                <button class="dashboard__btn" onclick="showWorth()">Calculate Networth</button>
             </div>
             <!--End of Dashboard
             =========================-->
             <!--Assets tab begins here
             =========================-->
-            <div class="assets__wrapper">
+            <!-- <div class="assets__wrapper">
+                    <i class="fa fa-bars openbars" onclick="showDashboardLeft()"></i>
                 <h3>Assets</h3>
                 <small>Having assets is what creates wealth. Your wealth is determined by how many assets you have.</small>
                 <div class="assets__card">
@@ -116,12 +119,13 @@
                                     <input type="text" id="total">
                                 </div>
                 </div>
-            </div>
+            </div> -->
             <!--End of Assets
             ======================-->
             <!--Laiability section begins here
             ==============================-->
-            <div class="liabilities__wrapper">
+            <!-- <div class="liabilities__wrapper">
+                    <i class="fa fa-bars openbars" onclick="showDashboardLeft()"></i>
                     <h3>Liabilities</h3>
                     <small>These are the things that takes money away from you. Try to limit them.</small>
                     <div class="liabilities__card">
@@ -138,12 +142,13 @@
                                         <input type="text" id="total">
                                     </div>
                     </div>
-            </div>
+            </div> -->
             <!--End of Lability section
             =============================-->
             <!--Networth Calculator section
             ===============================-->
             <div class="networth__wrapper">
+                    <i class="fa fa-bars openbars" onclick="showDashboardLeft()"></i>
                 <h3>Networth Calculator</h3>
                 <small>Please enter the money value of your assets and liabilities to find your networth</small>
                 <div class="networth__content">
@@ -206,6 +211,7 @@
         </div>
     </div>
 </div>
-<script src="./dashboard.js"></script>
+<script src="dashboard.js"></script>
+<script src="js/dashboard_functions.js"></script>
 </body>
 </html>

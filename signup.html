@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/signUp.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<title>Selene NetChecker - Sign Up</title>
+	<style type="text/css">
+	.row{
+		position: relative;
+		top: 0;
+		bottom: 0;
+		font-family: 'montaga';
+		font-size: 18px;
+	}
+	img{
+		width: 100%;
+		height: 100vh;
+	}
+	.form{
+		padding: 5px;
+	}
+	.form-header{
+		text-align: center;
+		color: rgb(0, 0, 0);
+	}
+	.form-header p:first-child{
+		text-align: right;
+		margin-bottom: 80px;
+		margin-right: 2rem;
+		margin-top: 2rem;
+	}
+	.form-header p:first-child::before{
+  	content: "\2192";
+  	color:black;
+  	min-width: 100px!important;
+  	padding-right: 30px;
+
+  	}
+  	.form-header p:first-child a{
+  		text-decoration: none;
+  		color: deepskyblue;
+  	}
+	.form-header p:last-child{
+		letter-spacing: 2px;
+	}
+	form {
+		margin: 0 auto;
+		width: 60%!important;
+	}
+	form input[type=password], 
+	form input[type=text],form input[type=email]{
+		height: 3rem;
+		font-family: 'montaga';
+		font-size: 18px;
+		color: #000000;
+	}
+	form input[placeholder]{
+		font-family: 'montaga';
+		font-size: 18px;
+		color: #000000;		
+	}
+	form input:focus{
+		outline-color: deepskyblue!important;
+		border-color: deepskyblue!important;
+	}
+	form input[type=submit]{
+		position: relative;
+		float: right;
+		border: none;
+		border-radius: 7px;
+		padding: 10px;
+		font-family: 'montaga';
+		font-size: 18px;
+		color: white!important;
+		right: 0!important;
+		background-color: deepskyblue;
+	}
+	form input[type=submit]:hover{
+		background-color: deepskyblue!important;
+		color: #c0c0c0;
+	}
+	.checker{
+	color: #fff;
+	background: deepskyblue;
+	padding:5px 10px;
+	margin-left: 2px;
+	border-radius: 25px;
+	}
+	</style>
+</head>
+<body>
+	<div class="row">
+		<div class="pic-frame col-md-7">
+			<img src="https://res.cloudinary.com/epospiky/image/upload/v1569407362/Rectangle.png" class="img-responsive">
+		</div>
+		<div class="form col-md-5" >
+			<div class="form-header">
+				<p><span class="arrow"></span><a href="login.html">Already have an account?</a></p>
+				<h3>Sign up for <span><b>Net</b></span><span class="checker">Checker</span></h3>
+				<P><br>Get to know your financial networth today!</P>
+			</div>
+			<form name="regForm" action="" method="post" onsubmit="return validateForm()">
+				<div id="alert">
+					<p id="message"></p>
+				</div >
+				<div class="form-group">
+					
+					<input type="text" name="firstName" placeholder="First name" class="form-control">
+				</div>
+
+				<div class="form-group">
+		
+					<input type="text" name="lastName" placeholder="Last Name" class="form-control">
+				</div>
+
+				<div class="form-group">
+					
+					<input type="email" name="email" placeholder="Email" class="form-control">
+				</div>
+
+				<div class="form-group">
+				
+					<input type="password" name="password" placeholder="Password" class="form-control">
+				</div>
+
+				<div class="form-group">
+					
+					<input type="password" name="confirmPassword" placeholder="Confirm Password" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<input type="submit" name="submit" value="Create Account" onclick="myFunction()" class="btn btn-primary">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div>
+		<script src="js/signUp.js"></script>
+	</div>
+
+</body>
+</html>

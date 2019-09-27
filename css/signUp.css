@@ -1,0 +1,141 @@
+
+body {
+	min-height: 100vh;
+	min-width: 100vw;
+	overflow-x: hidden;	
+}
+
+.navbar a {
+	color: white !important;
+}
+
+.navbar-brand {
+	font-family: cursive;
+}
+
+footer {
+	background: #2c3645; 
+	padding-top: 5px;
+	color: white;
+}
+
+.img-foot img {
+	width: 30px;
+	height: 30px;
+}
+
+.footer-contact input{
+  	margin: 8px 0;
+  	border: #F96D08;
+  	border-radius: 8px;
+  	padding: 10px 20px;
+  	font-family: serif;
+}
+
+.footer-contact input[type=submit]{
+	background: #F96D08;
+  	border: none;
+  	border-radius: 8px;
+  	color: white;
+  	cursor: pointer;
+}
+
+.col-sm-8 {
+	background: url(../images/background.png);
+	border-right: 2px solid #F96D08;
+	color: black;
+}
+
+
+
+.reg-p {
+	text-align: left;
+	font-size: 18px;
+	font-family: courier;
+}
+
+.create-acc {
+	color: #fefefe;
+	text-shadow: #590e5e 1px 3px;
+	font-size: 45px;
+}
+
+#regForm a{
+	text-decoration: none;
+	color: #F96D08;
+}
+
+#regForm input {
+  width: 80%;
+  margin: 8px 0;
+  border: 1px solid #F96D08;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-family: serif;
+  font-weight: bold;
+
+}
+
+#regForm input[type=submit] {
+  background: #F96D08;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 14px 16px;
+  cursor: pointer;
+  letter-spacing: 2px;
+
+}
+
+
+#alert {
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: #F96D08;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 10px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+	border-radius: 5px;
+	}
+
+#alert.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@media screen and (max-width: 500px) {
+body {
+	min-height: 100vh;
+	min-width: 100vw;
+	 
+}
+
+}

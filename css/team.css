@@ -1,0 +1,128 @@
+* {
+	box-sizing: border-box;
+	
+}
+body {
+	min-height: 100vh;
+	min-width: 100vw;	
+}
+
+.navbar a {
+	color: white !important;
+}
+
+
+
+.navbar-brand {
+	font-family: cursive;
+}
+
+footer {
+	background: #2c3645; 
+	padding-top: 5px;
+	color: white;
+}
+
+.img-foot img {
+	width: 30px;
+	height: 30px;
+}
+
+.footer-contact input{
+  	margin: 8px 0;
+  	border: #F96D08;
+  	border-radius: 8px;
+  	padding: 10px 20px;
+  	font-family: serif;
+}
+
+.footer-contact input[type=submit]{
+	background: #F96D08;
+  	border: none;
+  	border-radius: 8px;
+  	color: white;
+  	cursor: pointer;
+}
+
+
+
+#alert {
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 10px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+	border-radius: 5px;
+	}
+
+#alert.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* CSS BY SHAKIRA */
+#team-wrapper {
+	padding: 70px 0;
+}
+#team-wrapper .container-fluid {
+	width: 96%;
+}
+#team-wrapper video {
+	max-width: 100%;
+	border: 2px solid #f96d08;
+}
+#team-wrapper h4 {
+	width: 70%;
+}
+#team-wrapper h2 {
+	margin: 70px 0 50px 0;
+	border: 2px solid #f96d08;
+	padding: 10px 0 20px 0;
+}
+#team-wrapper img {
+	width: 50%;
+	margin-bottom: 30px;
+}
+#team-wrapper .img-circle {
+	border-radius: 50%;
+}
+
+/* ENDS HERE */
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@media screen and (max-width: 500px) {
+body {
+	min-height: 100vh;
+	min-width: 100vw;
+	 
+}
+
+}

@@ -1,0 +1,154 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #fff;
+	user-select: none;
+	font-family: sans-serif;
+	width: auto;
+}
+.header-left span{
+	float: left;
+	text-align: center;
+	padding:5px 10px;
+}
+.header-right{
+	float: right;
+	text-align: center;
+	padding:5px 10px;
+}
+.top-header{
+	margin: 30px 50px 0 20px;
+	font-size: 18px;
+	overflow: auto;
+}
+.checker{
+	color: #fff;
+	background: deepskyblue;
+	padding:5px 10px;
+	margin-left: 2px;
+	border-radius: 25px;
+}
+.signIn{
+	color: #fff;
+	background: deepskyblue;
+	padding:5px 10px;
+	margin-left: 2px;
+	margin-top: 10px;
+	border-radius: 25px;
+}
+.signUp{
+	color: #fff;
+	background: rgb(6, 40, 51);
+	padding:5px 10px;
+	margin-left: 2px;
+	margin-top: 10px;
+	border-radius: 25px;
+}
+.content-one{
+	margin-top: 15px;
+	background-image: url("./images/cac8.png");
+	background-size: cover;
+	background-position: center;
+	height: 700px;
+}
+.content-one h2{
+	opacity: .9;
+	text-align: center;
+	padding-top: 150px;
+	padding-right: 110px;
+	letter-spacing: 1px;
+	color: #fff;
+}
+.content-one-file{
+	color: tomato;
+	margin-top: 15px;
+}
+.content-one-clock{
+	float:left;
+	margin-left: 210px;
+	margin-top: 40px;
+	color: tomato;
+}
+.text-one{
+	color: deepskyblue;
+}
+.text-two{ 
+	float: right;
+	margin-right: 110px;
+	margin-top: 0;
+	
+}
+.text-three{
+	background-color: #bbb;
+	padding: 10px 25px;
+	color: blue;
+}
+.content-two{
+	height:400px;
+	background: deepskyblue;
+}
+.c2-header{
+	text-align: center;
+	padding-top: 60px;
+	opacity: 0.9;
+}
+.blk{
+	float: left;
+	text-align : center;
+	margin-top: 40px;
+	width: 20%;
+}
+.blk p{
+	padding: 15px;
+	text-align: center;
+}
+a{ 
+	text-decoration: none;
+ }
+ .get-started{
+ 	background: deepskyblue;
+ 	height: 50px;
+ 	padding-top: 20px;text-align: center;
+ }
+ .btn{
+ 	color: deepskyblue;
+	font-weight: bolder;
+	background: black;
+	opacity: 0.9;
+	padding: 10px 30px;
+	border-radius: 25px;
+ }
+
+ @media only screen and (max-width: 1150px){
+	.content-one-clock{
+		margin-left: 120px;
+		margin-top: 40px;
+	}
+	.text-two{
+		margin-right: 0;
+	}	
+}
+@media only screen and (max-width: 1000px){
+	.content-one-clock{
+		display: none;
+	}
+	.text-two{
+		display: none;
+	}
+	.arrow{
+		display: none;
+	}
+	.blk{
+		width: 33.33%;
+	}
+}
+@media only screen and (max-width: 500px){
+	.content-one{
+		background-size: 400px 600px;
+	}
+	.content-one h2{
+		margin-right: 0;
+	}
+}
