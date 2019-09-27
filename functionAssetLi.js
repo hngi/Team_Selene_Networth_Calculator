@@ -1,3 +1,4 @@
+
 // function for calculating assets
 function calculateAsset(){
     // store value of each individual input
@@ -10,10 +11,12 @@ function calculateAsset(){
     let property = document.getElementById('property').value;
     
 
+
     
    
     //quick validation
     if(cash === "" || business === "" || realEstate === "" || otherInvestments === "" || retirementSavings === "" || lifeInsurance === "" || property === "") {
+
         alert("To calculate assets, provide values for all input fields");
         return;
     }
@@ -29,19 +32,23 @@ function calculateAsset(){
 
          return totalAsset;
 
+
 }
 
         
 function calculateLiabilities(){
     // store value of each individual input
+
     let debts = document.getElementById('debts').value;
     let billsDue = document.getElementById('billsDue').value;
 
      
+
    
    
     //quick validation
     if(debts === "" || billsDue === "") {
+
         alert("To calculate liabilities, provide values for all input fields");
         return;
     }
@@ -69,6 +76,7 @@ function calculateLiabilities(){
      document.getElementById('showNetWorth').value = "N"+ netWorth;
     
   }
+
 
 
 
