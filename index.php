@@ -1,10 +1,3 @@
-<?php
-session_start();
-if(isset($_SESSION['user']))
-{
-    header('Location:dashboard.php');
-} 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,7 +93,7 @@ if(isset($_SESSION['user']))
 					</div>
 
 					<div>
-						<input type="submit" name="submit" value="Create Account" onclick="myFunction()">
+						<input type="submit" name="submit" value="Create Account">
 					</div>
 				</form>
 				</div>
@@ -250,7 +243,8 @@ if(isset($_SESSION['user']))
                 $file = fopen("data.php", "a");
                 fputs($file, "\r\nFirstname: ".$_POST["firstName"]. "Lastname: ".$_POST["lastName"]." Email: |".$_POST["email"]."| Password: |".$_POST["password"]."|");
                 fclose($file);
-				header("Location: login.php");
+				echo "<script>window.location.href='login.php';</script>";
+				
             }
         }
         else
