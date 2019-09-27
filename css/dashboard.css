@@ -201,7 +201,7 @@ ul{
     background: #23C1CF;
     padding: .6rem 2rem;
     font-weight: bold;
-    color:#4A5254;
+    color:#fff;
     border-radius: 4px;
 }
     
@@ -222,7 +222,7 @@ ul{
         text-decoration: none;
         border:none;
         cursor: pointer;
-        color:#333;
+        color:#fff;
         font-weight: bold;
         border-radius: 4px;
         margin-bottom: 5rem;
@@ -284,7 +284,7 @@ ul{
         border:none;
         padding: .6rem 3rem;
         cursor: pointer;
-        color:#4A5254;
+        color:#fff;
         font-weight: bold;
         font-size: .9rem;
     }
