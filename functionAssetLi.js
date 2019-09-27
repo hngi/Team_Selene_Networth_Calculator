@@ -1,51 +1,84 @@
+
+// function for calculating assets
 function calculateAsset(){
     // store value of each individual input
-    var cash = document.getElementById('cash').value;
-    var business = document.getElementById('business').value;
-    var realEstate = document.getElementById('realEstate').value;
-    var otherInvestments= document.getElementById('otherInvestments').value;
-    var retirementSavings= document.getElementById('retirementSavings').value;
-    var lifeInsurance= document.getElementById('lifeInsurance').value;
-    var property = document.getElementById('property').value;
+    let cash = document.getElementById('cash').value;
+    let business = document.getElementById('business').value;
+    let realEstate = document.getElementById('realEstate').value;
+    let otherInvestments= document.getElementById('otherInvestments').value;
+    let retirementSavings= document.getElementById('retirementSavings').value;
+    let lifeInsurance= document.getElementById('lifeInsurance').value;
+    let property = document.getElementById('property').value;
+    
+
+
     
    
     //quick validation
     if(cash === "" || business === "" || realEstate === "" || otherInvestments === "" || retirementSavings === "" || lifeInsurance === "" || property === "") {
-        alert("No input field can be left empty!");
+
+        alert("Provide values for all input fields");
         return;
     }
     // Maths: calculate the inputs
-    var totalAsset =  parseFloat(cash) + parseFloat(business) + parseFloat(realEstate) + parseFloat(otherInvestments) + parseFloat(retirementSavings) + parseFloat(lifeInsurance) + parseFloat(property);
+    let totalAsset =  parseFloat(cash) + parseFloat(business) + parseFloat(realEstate) + parseFloat(otherInvestments) + parseFloat(retirementSavings) + parseFloat(lifeInsurance) + parseFloat(property);
         
     
         // round up totalAsset to 2 decimal places
-        totalAsset = totalAsset.toFixed(2);
+    totalAsset = totalAsset.toFixed(2);
 
         // display totalAsset 
-        document.getElementById('showTotal').value = "N"+ totalAsset;
+    document.getElementById('showNetAsset').innerHTML = "N" + totalAsset;
+
+         return totalAsset;
+
 
 }
 
         
 function calculateLiabilities(){
     // store value of each individual input
-    var debts = document.getElementById('debts').value;
-    var billsDue = document.getElementById('billsDue').value;
+
+    let debts = document.getElementById('debt').value;
+    let billsDue = document.getElementById('billsDue').value;
+
+     
+
    
    
     //quick validation
     if(debts === "" || billsDue === "") {
-        alert("No input field can be left empty!");
+
+        alert("Provide values for all input fields");
         return;
     }
     // Maths: calculate the inputs
-    var totalLiabilities =  parseFloat(debts) + parseFloat(billsDue);
+    let totalLiabilities =  parseFloat(debts) + parseFloat(billsDue);
        
         totalLiabilities = totalLiabilities.toFixed(2);
 
-        document.getElementById('showTotalLiabilities').value = "N"+totalLiabilities;
+    document.getElementById('showNetLiabilities').innerHTML = "N" + totalLiabilities;
+        
+
+    return totalLiabilities;
     
 }
+ 
+
+  
+// function for calculating net worth
+  function calculateNetWorth() {
+    
+     let finalAssets = calculateAsset();
+     let finalLiabilities = calculateLiabilities();
+
+     let netWorth = finalAssets - finalLiabilities;
+      netWorth = netWorth.toFixed(2);
+     document.getElementById('showNetWorth').innerHTML = "N"+ netWorth;
+      return calculateNetWorth;
+    
+  }
+
 
 
 
