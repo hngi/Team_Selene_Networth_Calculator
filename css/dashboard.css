@@ -10,7 +10,6 @@ body {
 	overflow-x: hidden;
     line-height: 1.4;
     font-family: 'Lato', sans-serif;
-    height: 100vh;
 }
 
 .navbar a {
@@ -132,7 +131,7 @@ ul{
 }.dashboard__left{
     background: #BFEEF7;
     color:#4A5254;
-    height: 100vh;
+    
     padding-top: 3rem;
 }
 .dashboard__left ul li{

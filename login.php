@@ -61,10 +61,10 @@ if(isset($_SESSION['user']))
 				<div align="center">
 					<h1 class="login-acc" style="color:#F96D08;">Login</h1>
 					<div >
-						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">To</h2></p>
-						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">Check</h2></p>
-						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">Your</h2></p>
-						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">Networth</h2></p>
+						<p><h2 style="font-weight: bold; color: #F96D08;">To</h2></p>
+						<p><h2 style="font-weight: bold; color: #F96D08;">Check</h2></p>
+						<p><h2 style="font-weight: bold; color: #F96D08;">Your</h2></p>
+						<p><h2 style="font-weight: bold; color: #F96D08;">Networth</h2></p>
 					</div>
 					
 				</div>
@@ -79,7 +79,7 @@ if(isset($_SESSION['user']))
 						</div>
 
 						<div>
-							<span><p><a href="#">forgot password</a></p></span>
+							<span><p><a href="#">forgot password?</a></p></span>
 						</div>
 
 						<div>
@@ -217,7 +217,7 @@ if(isset($_SESSION['user']))
 	     $pass = $_POST['password'];
 
 	    if(isset($_POST["submit"])){
-	    $file = fopen('data.json', 'r');
+	    $file = fopen('data.php', 'r');
 	    $good=false;
 	    while(!feof($file)){
 	        $line = fgets($file);
