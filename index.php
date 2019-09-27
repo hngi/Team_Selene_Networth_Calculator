@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['user']))
+{
+    header('Location:dashboard.php');
+} 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-	<title>Selene | Networth calc</title>
+    <link rel="stylesheet" type="text/css" href="css/signUp.css">
+	<title>Sign Up</title>
 </head>
 <body>
 	<div>
@@ -25,14 +32,8 @@
 
 			  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-			      <li class="home-btn">
+			      <li class="nav-item active">
 			        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-			      </li>
-			      <li class="signUp-btn">
-			        <a class="nav-link" href="signUp.php">Sign Up</a>
-			      </li>
-			      <li class="login-btn">
-			        <a class="nav-link" href="login.php">Login</a>
 			      </li>
 			      <li class="nav-item">
 			        <a class="nav-link" href="team.php">Our Team</a>
@@ -48,15 +49,63 @@
 			  </div>
 			</nav>
 		</div>
-		<div>
-			<div class="align-self-start"><div><img src="images/background.png"></div>
+		<div class="row">
+		  <div class="col-sm-8">
+		  
+		  </div>
+
+		  <div class="col-sm-4">
+		  	<div style="text-align:center;">
+					<span> Already have an account?<a href="login.php" style="color: #F96D08; font-weight:bold"> Login</a></span>
 				</div>
-			<div class="align-self-end"><div><img src="images/background-mobile.png"></div></div>
-			<div class="align-self-center">Aligned flex item</div>
-			<div class="align-self-baseline">Aligned flex item</div>
-			<div class="align-self-stretch">Aligned flex item</div>
+				<div style="text-align:center;">
+					<h1 class="create-acc" style="color:#F96D08;">Create Account</h1>
+					<div>
+						<p class="reg-p" sty>You are a step away from knowing your financial worth.</p>
+					</div>
+					
+				</div>
+		  	<div id="regForm" align="center">
+					<form name="regForm" action="" method="post" onsubmit="return validateForm()">
+					<div id="alert">
+						<p id="message"></p>
+					</div>
+					<div>
+						<input type="text" name="firstName" placeholder="First Name" required>
+					</div>
+
+					<div>
+						<input type="text" name="lastName" placeholder="Last Name" required>
+					</div>
+
+					<div>
+						<input type="email" name="email" placeholder="Email" required>
+					</div>
+
+					<div>
+						<input type="password" name="password" placeholder="Password" required>
+					</div>
+
+					<div>
+						<input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+					</div>
+
+					<div>
+						<span><p>By registering, you agree to our <a href="#">Term & Conditions</a></p></span>
+					</div>
+
+					<div>
+						<p id="error-message"></p>
+            			<p id="success-message"></p>
+					</div>
+
+					<div>
+						<input type="submit" name="submit" value="Create Account" onclick="myFunction()">
+					</div>
+				</form>
+				</div>
+			</div>
 		</div>
-		
 		<footer class="page-footer font-small unique-color-dark">
 		  <div class="container text-center text-md-left mt-5">
 
@@ -72,8 +121,12 @@
 			      </div>
 			  </div>
  
+		      <!-- Grid column -->
+
+		      <!-- Grid column -->
 		      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
+		        <!-- Links -->
 		        <h6 class="text-uppercase font-weight-bold">Sponsors</h6>
 		        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
 		        <p>
@@ -90,8 +143,12 @@
 		        </p>
 
 		      </div>
+		      <!-- Grid column -->
+
+		      <!-- Grid column -->
 		      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
+		        <!-- Links -->
 		        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
 		        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
 		        <p>
@@ -108,6 +165,9 @@
 		        </p>
 
 		      </div>
+		      <!-- Grid column -->
+
+		      <!-- Grid column -->
 		      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
 		        <!-- Links -->
@@ -144,7 +204,6 @@
 		          </a>
 
 		        </div>
-
 		      </div>
 
 		    </div>
@@ -161,7 +220,43 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	</div>
+	<?php
+        if(isset($_POST["submit"]))
+        {
+            // check if user exist.
+            $file = fopen("data.json","r");
+            $findemail = false;
+            while(!feof($file))
+            {
+                $line = fgets($file);
+                $array = explode("|", $line);
+                if(trim($array[1]) == $_POST['email'])
+                {
+                    $findemail = true;
+                    break;
+                }
+            }
+            fclose($file);
 
 
+            if( $findemail )
+            {
+                echo "<script> document.getElementById('error-message').innerHTML = 'Email already exist, <a href=login.php>login </a> if you are existing user.'</script>";
+                return "index.php";
+            }
+
+            else
+            {
+                $file = fopen("data.json", "a");
+                fputs($file, "\r\nFirstname: ".$_POST["firstName"]. "Lastname: ".$_POST["lastName"]." Email: |".$_POST["email"]."| Password: |".$_POST["password"]."|");
+                fclose($file);
+				header("Location: login.php");
+            }
+        }
+        else
+        {
+            return "index.php";
+        }
+        ?>
 </body>
 </html>
