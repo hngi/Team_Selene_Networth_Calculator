@@ -24,22 +24,22 @@ if(isset($_SESSION['user']))
 		</div>
 
 		<div>
-			<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F96D08;">
+			<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#23C1CF;">
 			  <a class="navbar-brand" href="#">Selene</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
 
-			  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			  <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color:#23C1CF">
 			    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 			      <li class="nav-item active">
 			        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="team.php">Our Team</a>
+			        <a class="nav-link" href="">Our Team</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="about.php">About Us</a>
+			        <a class="nav-link" href="">About Us</a>
 			      </li>
 			    </ul>
 			    <form class="form-inline my-2 my-lg-0">
@@ -56,15 +56,15 @@ if(isset($_SESSION['user']))
 
 		  <div class="col-sm-4">
 		  	<div style="text-align:center;">
-					<span>Don't have an account? <a href="index.php" style="color: #F96D08;font-weight:bold"> Signup </a></span>
+					<span>Don't have an account? <a href="index.php" style="color: #23C1CF;font-weight:bold"> Signup </a></span>
 				</div>
 				<div align="center">
-					<h1 class="login-acc" style="color:#F96D08;">Login</h1>
+					<h1 class="login-acc" style="color:#23C1CF;">Login</h1>
 					<div >
-						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">To</h2></p>
-						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">Check</h2></p>
-						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">Your</h2></p>
-						<p><h2 style="font-family:Segoe Print; font-weight: bold; color: #F96D08;">Networth</h2></p>
+						<p><h2 style="font-weight: bold; color: #23C1CF;">To</h2></p>
+						<p><h2 style="font-weight: bold; color: #23C1CF;">Check</h2></p>
+						<p><h2 style="font-weight: bold; color: #23C1CF;">Your</h2></p>
+						<p><h2 style="font-weight: bold; color: #23C1CF;">Networth</h2></p>
 					</div>
 					
 				</div>
@@ -79,7 +79,7 @@ if(isset($_SESSION['user']))
 						</div>
 
 						<div>
-							<span><p><a href="#">forgot password</a></p></span>
+							<span><p><a href="#">forgot password?</a></p></span>
 						</div>
 
 						<div>
@@ -217,7 +217,7 @@ if(isset($_SESSION['user']))
 	     $pass = $_POST['password'];
 
 	    if(isset($_POST["submit"])){
-	    $file = fopen('data.json', 'r');
+	    $file = fopen('data.php', 'r');
 	    $good=false;
 	    while(!feof($file)){
 	        $line = fgets($file);

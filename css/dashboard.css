@@ -20,7 +20,7 @@ body {
 
 
 .navbar-brand {
-	font-family: cursive;
+	font-weight:bold;
 }
 
 footer {
@@ -36,14 +36,14 @@ footer {
 
 .footer-contact input{
   	margin: 8px 0;
-  	border: #F96D08;
+  	border: #23C1CF;
   	border-radius: 8px;
   	padding: 10px 20px;
   	font-family: serif;
 }
 
 .footer-contact input[type=submit]{
-	background: #F96D08;
+	background:#23C1CF;
   	border: none;
   	border-radius: 8px;
   	color: white;
@@ -132,7 +132,7 @@ ul{
 }.dashboard__left{
     background: #BFEEF7;
     color:#4A5254;
-    height: 100vh;
+    
     padding-top: 3rem;
 }
 .dashboard__left ul li{

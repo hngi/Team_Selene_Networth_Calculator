@@ -1,10 +1,3 @@
-<?php
-session_start();
-if(isset($_SESSION['user']))
-{
-    header('Location:dashboard.php');
-} 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +17,7 @@ if(isset($_SESSION['user']))
 		</div>
 
 		<div>
-			<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F96D08;">
+			<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#23C1CF;">
 			  <a class="navbar-brand" href="#">Selene</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -36,10 +29,10 @@ if(isset($_SESSION['user']))
 			        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="team.php">Our Team</a>
+			        <a class="nav-link" href="#">Our Team</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="about.php">About Us</a>
+			        <a class="nav-link" href="#">About Us</a>
 			      </li>
 			    </ul>
 			    <form class="form-inline my-2 my-lg-0">
@@ -56,12 +49,12 @@ if(isset($_SESSION['user']))
 
 		  <div class="col-sm-4">
 		  	<div style="text-align:center;">
-					<span> Already have an account?<a href="login.php" style="color: #F96D08; font-weight:bold"> Login</a></span>
+					<span> Already have an account?<a href="login.php" style="color: #23C1CF; font-weight:bold"> Login</a></span>
 				</div>
 				<div style="text-align:center;">
-					<h1 class="create-acc" style="color:#F96D08;">Create Account</h1>
+					<h1 class="create-acc" style="color:#23C1CF;">Create Account</h1>
 					<div>
-						<p class="reg-p" sty>You are a step away from knowing your financial worth.</p>
+						<p class="reg-p">You are a step away from knowing your financial worth.</p>
 					</div>
 					
 				</div>
@@ -100,7 +93,7 @@ if(isset($_SESSION['user']))
 					</div>
 
 					<div>
-						<input type="submit" name="submit" value="Create Account" onclick="myFunction()">
+						<input type="submit" name="submit" value="Create Account">
 					</div>
 				</form>
 				</div>
@@ -224,7 +217,7 @@ if(isset($_SESSION['user']))
         if(isset($_POST["submit"]))
         {
             // check if user exist.
-            $file = fopen("data.json","r");
+            $file = fopen("data.php","r");
             $findemail = false;
             while(!feof($file))
             {
@@ -247,10 +240,12 @@ if(isset($_SESSION['user']))
 
             else
             {
-                $file = fopen("data.json", "a");
+                $file = fopen("data.php", "a");
                 fputs($file, "\r\nFirstname: ".$_POST["firstName"]. "Lastname: ".$_POST["lastName"]." Email: |".$_POST["email"]."| Password: |".$_POST["password"]."|");
                 fclose($file);
-				header("Location: login.php");
+				
+				// echo "<script>alert('ok')</script>";
+				echo "<script>alert('Success: Registration successful. Please login');window.location.href='login.php';</script>";
             }
         }
         else
