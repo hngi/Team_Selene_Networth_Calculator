@@ -243,8 +243,9 @@
                 $file = fopen("data.php", "a");
                 fputs($file, "\r\nFirstname: ".$_POST["firstName"]. "Lastname: ".$_POST["lastName"]." Email: |".$_POST["email"]."| Password: |".$_POST["password"]."|");
                 fclose($file);
-				echo "<script>window.location.href='login.php';</script>";
 				
+				// echo "<script>alert('ok')</script>";
+				echo "<script>alert('Success: Registration successful. Please login');window.location.href='login.php';</script>";
             }
         }
         else
