@@ -1,4 +1,14 @@
-<?php session_start() ?>
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: sign-in.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,14 +25,14 @@
 </head>
 <div class="main__wrapper">
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#23C1CF;">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(0,191,255);">
             <a class="navbar-brand" href="#">Selene</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color:#23C1CF;">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="background-color: rgb(0,191,255);">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="home-btn">
                         <a class="nav-link" href="index.php">Home</a>
@@ -35,11 +45,7 @@
                         <a class="nav-link" href="">About Us</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
-                        style="color: white; border: 1px solid white;">Search</button>
-                </form>
+                
             </div>
         </nav>
     </div>
@@ -65,7 +71,7 @@
     =============================-->
     <div class="dashboard__wrapper">
         <div class="dashboard__left">
-            <img src="./assets/profile1.png" class="profile-img" alt="">
+            <img src="./imgs/profile1.png" class="profile-img" alt="">
            <ul>
                <li><a href="#" onclick="showDashboard()">Dashboard</a></li>
                <!-- <li><a href="#" onclick="showAssets()">Assets</a></li>
@@ -90,7 +96,7 @@
             ===================-->
             <div class="dashboard__right__contents">
                     <i class="fa fa-bars openbars" onclick="showDashboardLeft()"></i>
-                <h3>Welcome Back</h3>
+                <h3>Welcome <em><?php echo htmlspecialchars($_SESSION["username"]); ?></em></h3>
                 <small>Take control of your assets and liabilities and get a sense of your financial worth!</small>
                 <!-- <div class="financial__info">
                     <div class="financial__card assets">
@@ -279,114 +285,101 @@
         </div>
     </div>
 </div>
-<footer class="page-footer font-small unique-color-dark">
-    <div class="container text-center text-md-left mt-5">
 
-        <div class="row mt-3">
 
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">Subscribe To Our Newslater</h6>
-                <div>
-                    <form class="footer-contact">
-                        <input type="email" name="sub-email" placeholder="Your Email">
-                        <input type="submit" name="submit" value="Subscribe">
-                    </form>
-                </div>
-            </div>
 
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
-                <h6 class="text-uppercase font-weight-bold">Sponsors</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <a href="#!">Hotel Ng</a>
-                </p>
-                <p>
-                    <a href="#!">Flutterwave</a>
-                </p>
-                <p>
-                    <a href="#!">Start Ng</a>
-                </p>
-                <p>
-                    <a href="team.php">Team Selene</a>
-                </p>
-
-            </div>
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                <h6 class="text-uppercase font-weight-bold">Useful links</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <a href="login.php">Login</a>
-                </p>
-                <p>
-                    <a href="signUp.php">Sign Up</a>
-                </p>
-                <p>
-                    <a href="about.php">About Us</a>
-                </p>
-                <p>
-                    <a href="#">Help</a>
-                </p>
-
-            </div>
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Address</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <i class="fas mr-3"><img src="images/office.png" width="20" height="20"></i> Team Selene Com</p>
-                <p>
-                    <i class="fas mr-3"><img src="images/mail.png" width="20" height="20"></i> info@example.com</p>
-                <p>
-                    <i class="fas mr-3"><img src="images/phone.png" width="20" height="20"></i> + 234 900 000 00</p>
-                <p>
-                    <i class="fas mr-3"><img src="images/fax.png" width="20" height="20"></i> + 01 000 000 00</p>
-
-            </div>
-        </div>
-    </div>
-    <div>
-        <div class="container">
-            <div align="center" class="img-foot">
-                <h6>Connect with us on social networks!</h6>
-                <div class="col-md-6 col-lg-7 text-center">
-                    <a class="fb-ic">
-                        <i class="fab  white-text mr-4"><img
-                                src="https://res.cloudinary.com/ros4eva/image/upload/v1566984764/facebook_mz3zyw.png"></i>
-                    </a>
-                    <a class="tw-ic">
-                        <i class="fab  white-text mr-4"><img
-                                src="https://res.cloudinary.com/ros4eva/image/upload/v1566984742/twitter_yvunur.png"></i>
-                    </a>
-                    <a class="gplus-ic" href="https://github.com/hngi/Team_Selene_Networth_Calculator/">
-                        <i class="fab fa-github-g white-text mr-4"><img
-                                src="https://res.cloudinary.com/ros4eva/image/upload/v1566984708/github_x9sdlq.png"></i>
-                    </a>
-                    <a class="li-ic">
-                        <i class="fab fa-linkedin-in white-text mr-4"><img
-                                src="https://res.cloudinary.com/ros4eva/image/upload/v1567084617/linkedin_x5cgkx.png"
-                                alt="linkedin"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    
-    <div>
-        <script src="dashboard.js"></script>
+<script src="js/dashboard.js"></script>
+        
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="functionAssetLi.js"></script>
+        
+        <script>
+            
+// function for calculating assets
+function calculateAsset(){
+    // store value of each individual input
+    let cash = document.getElementById('cash').value;
+    let business = document.getElementById('business').value;
+    let realEstate = document.getElementById('realEstate').value;
+    let otherInvestments= document.getElementById('otherInvestments').value;
+    let retirementSavings= document.getElementById('retirementSavings').value;
+    let lifeInsurance= document.getElementById('lifeInsurance').value;
+    let property = document.getElementById('property').value;
+    
 
-    </div>
 
-</footer>
+    
+   
+    //quick validation
+    if(cash === "" || business === "" || realEstate === "" || otherInvestments === "" || retirementSavings === "" || lifeInsurance === "" || property === "") {
+
+        alert("Provide values for all input fields");
+        return;
+    }
+    // Maths: calculate the inputs
+    let totalAsset =  parseFloat(cash) + parseFloat(business) + parseFloat(realEstate) + parseFloat(otherInvestments) + parseFloat(retirementSavings) + parseFloat(lifeInsurance) + parseFloat(property);
+        
+    
+        // round up totalAsset to 2 decimal places
+    totalAsset = totalAsset.toFixed(2);
+
+        // display totalAsset 
+    document.getElementById('showNetAsset').innerHTML = "N" + totalAsset;
+
+         return totalAsset;
+
+
+}
+
+        
+function calculateLiabilities(){
+    // store value of each individual input
+
+    let debts = document.getElementById('debt').value;
+    let billsDue = document.getElementById('billsDue').value;
+
+     
+
+   
+   
+    //quick validation
+    if(debts === "" || billsDue === "") {
+
+        alert("Provide values for all input fields");
+        return;
+    }
+    // Maths: calculate the inputs
+    let totalLiabilities =  parseFloat(debts) + parseFloat(billsDue);
+       
+        totalLiabilities = totalLiabilities.toFixed(2);
+
+    document.getElementById('showNetLiabilities').innerHTML = "N" + totalLiabilities;
+        
+
+    return totalLiabilities;
+    
+}
+ 
+
+  
+// function for calculating net worth
+  function calculateNetWorth() {
+    
+     let finalAssets = calculateAsset();
+     let finalLiabilities = calculateLiabilities();
+
+     let netWorth = finalAssets - finalLiabilities;
+      netWorth = netWorth.toFixed(2);
+      if (!isNaN(netWorth)) {
+     document.getElementById('showNetWorth').innerHTML = "N"+ netWorth;
+      
+      }
+      return calculateNetWorth;
+    
+  }
+
+        </script>
 </body>
 </html>

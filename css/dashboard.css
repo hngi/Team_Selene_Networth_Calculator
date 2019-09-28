@@ -36,14 +36,14 @@ footer {
 
 .footer-contact input{
   	margin: 8px 0;
-  	border: #23C1CF;
+  	border: deepskyblue;
   	border-radius: 8px;
   	padding: 10px 20px;
   	font-family: serif;
 }
 
 .footer-contact input[type=submit]{
-	background:#23C1CF;
+	background:deepskyblue;
   	border: none;
   	border-radius: 8px;
   	color: white;
@@ -198,7 +198,7 @@ ul{
 .top__right a{
     text-decoration: none;
     font-size: .9rem;
-    background: #23C1CF;
+    background: deepskyblue;
     padding: .6rem 2rem;
     font-weight: bold;
     color:#fff;
@@ -217,7 +217,7 @@ ul{
         color:#4A5254;
     }
     .dashboard__btn{
-        background: #23C1CF;
+        background: deepskyblue;
         padding: 1rem 3rem;
         text-decoration: none;
         border:none;
@@ -281,7 +281,7 @@ ul{
         color:#4A5254;
     }
     .calculate__btn, .liabilities__btn{
-        background: #23C1CF;
+        background: deepskyblue;
         border:none;
         padding: .6rem 3rem;
         cursor: pointer;
@@ -320,12 +320,11 @@ ul{
     }
     .assets__form input, .liability__form input{
         width: 95%;
-        height: 2.5rem;
         padding: 1rem .5rem;
         outline: none;
         margin-bottom: 1rem;
         margin-top: .2rem;
-        border:1px solid #23C1CF;
+        border:1px solid deepskyblue;
         border-radius: 4px;
     }
     .assets__form input, .liability__form input::placeholder{
@@ -336,14 +335,14 @@ ul{
         color:#4A5254;
     }
     .total__input{
-        background: #23C1CF;
+        background: deepskyblue;
         border:0px;
     }
     .result{
         margin-top: 2rem;
     }
     .result h4{
-        color: #23C1CF;
+        color: deepskyblue;
         font-weight: bold;
         padding-bottom: .53rem;
     }
