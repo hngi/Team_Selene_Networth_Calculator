@@ -124,7 +124,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="login__container">
                 <div class="wrapper">
         <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
+        <?php 
+            
+
+            if(isset($_SESSION["success_message"]) == true) {
+                echo '<p class="color-green">';
+                echo $_SESSION["success_message"]; // Or show the box, or whatever
+                echo '</p>';
+            }else {
+                echo '<p>';
+                echo 'Please fill in your credentials to login.';
+                echo '</p>' ;
+            }
+            $_SESSION["success_message"] = null; // Clean up 
+            ?>
+        <!-- <p>Please fill in your credentials to login.</p> -->
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
 
@@ -135,7 +149,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <label class="form__label">Email</label>
                 </div>
                 
-                <span class="help-block"><?php echo $username_err; ?></span>
+                <span class="help-block color-red"><?php echo $username_err; ?></span>
             </div>  
 
             <div class="form__group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>"> 
@@ -145,7 +159,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <label class="form__label">Password</label>
                 </div>
                 
-                <span class="help-block"><?php echo $password_err; ?></span>
+                <span class="help-block color-red"><?php echo $password_err; ?></span>
             </div>
             <div class="form__group">
                 <input type="submit" class="btn btn--blue" value="Login">

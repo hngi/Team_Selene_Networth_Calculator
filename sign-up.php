@@ -80,7 +80,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if($stmt->execute()){
                 // Redirect to login page
+                // header("location: sign-in.php");                
+                session_start();
+                $_SESSION["success_message"] = "Registration Successful! Login to Continue.";
                 header("location: sign-in.php");
+
+
+
             } else{
                 echo "Something went wrong. Please try again later.";
             }
@@ -140,7 +146,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <label class="form__label">Email</label>
                 </div>
                 
-                <span class="help-block"><?php echo $username_err; ?></span>
+                <span class="help-block color-red"><?php echo $username_err; ?></span>
             </div>  
 
             <div class="form__group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>"> 
@@ -150,7 +156,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <label class="form__label">Password</label>
                 </div>
                 
-                <span class="help-block"><?php echo $password_err; ?></span>
+                <span class="help-block color-red"><?php echo $password_err; ?></span>
             </div>
             
             <div class="form__group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>"> 
@@ -160,7 +166,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <label class="form__label">Confirm Password</label>
                 </div>
                 
-                <span class="help-block"><?php echo $confirm_password_err; ?></span>
+                <span class="help-block color-red"><?php echo $confirm_password_err; ?></span>
             </div>
             
             <div class="form__group">

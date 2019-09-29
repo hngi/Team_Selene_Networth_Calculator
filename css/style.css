@@ -128,6 +128,14 @@ h1 {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
 }
 
+.color-red {
+    color: #e01b37 !important;
+}
+
+.color-green{
+    color: green !important;
+} 
+
 .heading-primary {
     position: absolute;
     top: 50%;

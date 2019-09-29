@@ -49,22 +49,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             </div>
         </nav>
     </div>
-    <!-- <div class="navbar">
-        <div class="container">
-            <div class="navbar__contents">
-                <div class="navbar__logo">
-                    <h2>Selene Networth</h2>
-                </div>
-                <ul class="navbar__items">
-                     <li><a><small>. . . Take control of your assets and liabilities and get a sense of your financial worth!</small></a></li>
-                    <li><a href="/">About Us</a></li>
-                    <li><a href="/">Team</a></li>
-                    <li><a href="/">Sign Up</a></li> -->
-                    <!-- <li><a href="index.html">Log Out</a></li> -->
-                </ul>
-            </div>
-        </div>
-    </div>
+   
     <!--End of Navbar
     ==========================-->
     <!--Dashboard starts here
@@ -98,106 +83,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <i class="fa fa-bars openbars" onclick="showDashboardLeft()"></i>
                 <h3>Welcome <em><?php echo htmlspecialchars($_SESSION["username"]); ?></em></h3>
                 <small>Take control of your assets and liabilities and get a sense of your financial worth!</small>
-                <!-- <div class="financial__info">
-                    <div class="financial__card assets">
-                        <h4>Total Assets</h4>
-                        <p>&#8358; 00.00</p>
-                    </div>
-                    <div class="financial__card liabilities">
-                            <h4>Total Liabilities</h4>
-                            <p>&#8358; 00.00</p>
-                        </div>
-                        <div class="financial__card assets">
-                                <h4>Total Assets</h4>
-                                <p>&#8358; 00.00</p>
-                            </div>
-                </div> -->
+              
                 <br />
                 <br />
                 <button class="dashboard__btn" onclick="showWorth()">Calculate Networth</button>
             </div>
-            <!--End of Dashboard
-            =========================-->
-            <!--Assets tab begins here
-            =========================-->
-            <!-- <div class="assets__wrapper">
-                    <i class="fa fa-bars openbars" onclick="showDashboardLeft()"></i>
-                <h3>Assets</h3>
-                <small>Having assets is what creates wealth. Your wealth is determined by how many assets you have.</small>
-                <div class="assets__card">
-                <div class="assets__contents">
-                        <h5>Cash</h5>
-                        <input type="number" id="cash">
-                    </div>
-
-                    <div class="assets__contents">
-                        <h5>Businesses</h5>
-                        <input type="number" id="business">
-                    </div>
-
-                    <div class="assets__contents">
-                        <h5>Real Estate</h5>
-                        <input type="number" id="realEstate">
-                    </div>
-
-                    <div class="assets__contents">
-                        <h5>Other Investments</h5>
-                        <input type="number" id="otherInvestments">
-                    </div>
-
-                    <div class="assets__contents">
-                        <h5>Retirement Savings</h5>
-                        <input type="number" id="retirementSavings">
-                    </div>
-
-                    <div class="assets__contents">
-                        <h5>Life Insurance</h5>
-                        <input type="number" id="lifeInsurance">
-                    </div>
-                    
-                    <div class="assets__contents">
-                        <h5>Property</h5>
-                        <input type="number" id="property">
-                    </div><br />
-                    
-                    <div class="assets__contents">
-                        <button type="button " id="calculate" onclick="calculateAsset()">Calculate Total</button>
-                        
-                        <input id="showTotal"  disabled>
-                    </div>
-                </div>
-
-            </div>
+          
 
 
-            <!--End of Assets
-            ======================-->
-            <!--Laiability section begins here
-            ==============================-->
-            <!-- <div class="liabilities__wrapper">
-                    <i class="fa fa-bars openbars" onclick="showDashboardLeft()"></i>
-                    <h3>Liabilities</h3>
-                    <small>These are the things that takes money away from you. Try to limit them.</small>
-                    <div class="liabilities__card">
-                    <div class="liability__contents">
-                            <h5>Debts</h5>
-                            <input type="text"  id="debts">
-                        </div>
-
-                        <div class="liability__contents">
-                            <h5>Bills Due</h5>
-                            <input type="text" id="billsDue">
-                        </div><br />
-                        <div class="liability__contents">
-                        <button class="liabilities__btn" id="calculateToTal" onclick="calculateLiabilities()">Calculate Total</button>
-                       
-
-                        <input id="showTotalLiabilities"  disabled>
-                        </div>
-                    </div>
-            </div> -->
-            <!--End of Lability section
-            =============================-->
             <!--Networth Calculator section
             ===============================-->
             <div class="networth__wrapper">
