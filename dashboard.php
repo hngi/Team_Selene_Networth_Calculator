@@ -9,12 +9,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 ?>
 <!DOCTYPE html>
-<!-- 
-Template Name: Deepor - Responsive Bootstrap 4 Admin Dashboard Template
-Author: Hencework
 
-License: You must have a valid license purchased only from templatemonster to legally use the template for your project.
--->
 <html lang="en">
 
 <head>
@@ -62,7 +57,7 @@ License: You must have a valid license purchased only from templatemonster to le
                 </li>
            
                 <li class="nav-item dropdown dropdown-authentication">
-                    <a class="nav-link dropdown-toggle no-caret" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle no-caret" href="#" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                         <div class="media">
                             <div class="media-img-wrap">
                                 <div class="avatar">
