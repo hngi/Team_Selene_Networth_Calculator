@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/64f240fcea.js"></script>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+.accordion {
+  background-color: #eee;
+  border:1px solid deepskyblue;
+  border-radius: 25px;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+</style>
+</head>
+<body>
+        <section class="main_wrapper">
+
+                <div class="topbar">
+                    <p>Net <span class="checker">Checker</span></p>   
+                 <a href="sign-in.php" class="checker align-right">Login </a>
+                </div>
+
+<h2>Frequently Asked Questions</h2><br>
+<button class="accordion">What exactly is net worth?</button>
+<div class="panel">
+  <p>There is a simple formula that easily defines net worth. Add up all your assets—income, savings, investments and property. Then subtract all your existing debts. The total is your net worth.</p>
+</div><br><br>
+<button class="accordion">When will I need to know my net worth?</button>
+<div class="panel">
+  <p>While you won’t need to keep track of your net worth on a day to day basis, there are critical moments when it’s a good idea to have a firm grasp of your true value. You may want to understand the long-term trends for your net worth (how quickly you’re making or losing value) when planning your retirement or your estate. You may need it when looking to secure a mortgage or apply for student loans on behalf of your children.</p>
+</div><br><br>
+<button class="accordion">How net worth is calculated?</button>
+<div class="panel">
+  <p>Net worth is the value of all assets, minus the total of all liabilities. Put another way, net worth is what is owned minus what is owed. This net worth calculator helps determine your net worth. It also estimates how net worth could grow or decline over the next 10 years.</p>
+</div><br><br>
+<button class="accordion">Which calculator should i use?</button>
+<div class="panel">
+  <p>Selene Networth calculator is very easy to use and efficient</p>
+</div><br><br>
+<button class="accordion">Is Selene Calculator free to use?</button>
+<div class="panel">
+  <p>yes it is. but you would have to sign up so as to be able to store and track your networth history. you can use the getstarted button below this page to sign up</p>
+</div><br><br>
+<p>
+<button class="accordion">How do you account for outstanding car loans and mortgage payments?</button>
+<div class="panel">
+  <p>When incorporating existing loans into your net worth calculation, you cannot truly consider houses or vehicles as assets until they’ve been paid for in full. So if you took out a $100,000 mortgage and have paid off $99,000, your home is still considered a $1,000 liability. But once you’ve made your last payment your home becomes a $100,000 asset</p>
+</div></p>
+<div align="center">
+<a href="sign-up.php" class="checker started">GET STARTED</a>
+</div>
+<script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+</body>
+</html>
