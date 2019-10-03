@@ -28,15 +28,26 @@
 .topbar {
     height: 5rem;
     position: relative;
-    font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.2em;
+	padding:0.3em 0.63em;
 }
 .topbar a, .topbar p {
-    position: absolute;
+    /* position: absolute; */
     top: 2.5rem;
 }
-
+.topbar p {
+    /* position: relative; */
+	top: 3.5rem;
+	float: left;
+	left: -0.5rem;
+}
 .topbar a {
-    right: .5rem;
+	right: .5rem;
+	/* position: relative; */
+	top: 2rem;
+	/* text-align: center; */
+	float: right;
 }
 
 .checker{
@@ -45,7 +56,8 @@
 	padding:5px 10px;
 	margin-left: 2px;
     border-radius: 25px;
-    text-decoration: none;
+	text-decoration: none;
+	text-align: center;
 }
 
 .started {
