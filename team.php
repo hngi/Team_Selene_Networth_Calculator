@@ -17,7 +17,7 @@
 		</div>
 
 		<div>
-			<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F96D08;">
+			<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #23C1CF;">
 			  <a class="navbar-brand" href="#">Selene</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -41,54 +41,67 @@
 			        <a class="nav-link" href="about.php">About Us</a>
 			      </li>
 			    </ul>
-			    <form class="form-inline my-2 my-lg-0">
-			      <input class="form-control mr-sm-2" type="search" placeholder="Search">
-			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: white; border: 1px solid white;">Search</button>
-			    </form>
 			  </div>
 			</nav>
 		</div>
 		
 		<main>
 			<section id="team-wrapper">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-lg-5 col-md-5 col-sm-5 col-12">
-							<div>
-								<video controls>
-								    <source src="movie.mp4" type="video/mp4">
-								    <source src="movie.ogg" type="video/ogg">
-									Your browser does not support the video tag.
-								</video>
-							</div>
-						</div>
-						<div class="col-lg-7 col-md-7 col-sm-7 col-12">
-							<div>
-								<h4>Networth Checker is known for its accuracy, by combining some parameters such as assets, liability. Send your networth in 3 minutes. <br><br> It is simply a calculation of what you owe subtracted from what you own.</h4>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
 					<h2 class="text-center">Meet Our Team</h2>
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-lg-4 col-md-4 col-sm-6 col-12">
 								<div class="text-center">
 									<img src="https://res.cloudinary.com/shakirah/image/upload/v1523834950/shakira.jpg" class="img-fluid img-circle" alt="">
-									<h3>Software Developer</h3>
+									<h3>Frontend Developer</h3>
 								</div>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-6 col-12">
 								<div class="text-center">
-									<img src="https://res.cloudinary.com/shakirah/image/upload/v1523834950/shakira.jpg" class="img-fluid img-circle" alt="">
-									<h3>Software Developer</h3>
+									<img src="https://res.cloudinary.com/cypher/image/upload/v1566537651/Yusuf_zrin2n.jpg" class="img-fluid img-circle" alt="">
+									<h3>Frontend Developer</h3>
 								</div>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-6 col-12">
 								<div class="text-center">
-									<img src="https://res.cloudinary.com/shakirah/image/upload/v1523834950/shakira.jpg" class="img-fluid img-circle" alt="">
-									<h3>Software Developer</h3>
+									<img src="https://res.cloudinary.com/dp5lqz0gr/image/upload/v1566558897/IMG_20190123_140854_6_l0ogok.jpg" class="img-fluid img-circle" alt="">
+									<h3>Frontend Developer</h3>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+								<div class="text-center">
+									<img src="https://res.cloudinary.com/codezix/image/upload/v1567509916/hngcn_i6aaor.jpg" class="img-fluid img-circle">
+									<h3>Frontend Developer</h3>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+								<div class="text-center">
+									<img src="https://res.cloudinary.com/dreoz7kwc/image/upload/v1566576644/WhatsApp_Image_2019-08-12_at_9.16.45_AM_ixll9z.jpg" class="img-fluid img-circle">
+									<h3>Frontend Developer</h3>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+								<div class="text-center">
+									<img src="https://res.cloudinary.com/utibe/image/upload/v1570135680/Personal/Utibe%20Etim.jpg" class="img-fluid img-circle">
+									<h3>Android Developer</h3>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+								<div class="text-center">
+									<img src="https://res.cloudinary.com/ros4eva/image/upload/v1570140043/IMG_20190927_150929_gpoaza.jpg" class="img-fluid img-circle">
+									<h3>Backend Developer</h3>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+								<div class="text-center">
+									<img src="https://res.cloudinary.com/iinintinteintegintegrintegral/image/upload/v1566575113/Cv%20image.jpg" class="img-fluid img-circle">
+									<h3>Frontend Developer</h3>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+								<div class="text-center">
+									<img src="https://res.cloudinary.com/agent-kings/image/upload/v1567197354/School%20boy/new_pasport_dcomfn.jpg" class="img-circle img-fluid">
+									<h3>Digital Marketer/UI-UX</h3>
 								</div>
 							</div>
 						</div>
@@ -103,7 +116,7 @@
 		    <div class="row mt-3">
 
 		      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-		      	<h6 class="text-uppercase font-weight-bold">Subscribe To Our Newslater</h6>
+		      	<h6 class="text-uppercase font-weight-bold">Subscribe To Our Newsletter</h6>
 		      	<div>
 			        <form class="footer-contact">			        	
 			         	<input type="email" name="sub-email" placeholder="Your Email" >

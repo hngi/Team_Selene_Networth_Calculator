@@ -2,9 +2,15 @@
 	box-sizing: border-box;
 	
 }
-body {
+/*body {
 	min-height: 100vh;
 	min-width: 100vw;	
+}*/
+body {
+	min-height: 100vh;
+	min-width: 100vw;
+	overflow-x: hidden;
+		
 }
 
 .navbar a {
@@ -15,6 +21,7 @@ body {
 
 .navbar-brand {
 	font-family: cursive;
+	font-weight: bold;
 }
 
 footer {
@@ -70,27 +77,28 @@ footer {
 }
 
 /* CSS BY SHAKIRA */
-#team-wrapper {
+/*#team-wrapper {
 	padding: 70px 0;
-}
+}*/
 #team-wrapper .container-fluid {
-	width: 96%;
+	width: 80%;
 }
-#team-wrapper video {
+/*#team-wrapper video {
 	max-width: 100%;
 	border: 2px solid #f96d08;
-}
+}*/
 #team-wrapper h4 {
 	width: 70%;
 }
 #team-wrapper h2 {
-	margin: 70px 0 50px 0;
-	border: 2px solid #f96d08;
-	padding: 10px 0 20px 0;
+	margin: 60px 0 40px 0;
+	border: 2px solid #23C1CF;
+	padding: 8px 0 10px 0;
 }
 #team-wrapper img {
-	width: 50%;
-	margin-bottom: 30px;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
 }
 #team-wrapper .img-circle {
 	border-radius: 50%;
