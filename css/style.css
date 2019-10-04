@@ -29,10 +29,24 @@
     height: 5rem;
     position: relative;
     font-family: 'Raleway', sans-serif;
+    border: solid red;
 }
-.topbar a, .topbar p {
-    position: absolute;
+
+/* seperated .topbar a, .topbar p  and float right*/
+
+.topbar a{
+    position: relative;
     top: 2.5rem;
+    float: right;
+
+}
+/* seperated .topbar a, .topbar p  and float left*/
+
+.topbar p {
+    position: relative;
+    top: 2.5rem;
+    float: left;
+
 }
 
 .topbar a {
