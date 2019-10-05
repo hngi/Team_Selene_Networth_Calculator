@@ -21,15 +21,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-	
-	<!-- vector map CSS -->
+    
+    <!-- vector map CSS -->
     <link href="vendors/vectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet" type="text/css" />
 
     <!-- Toggles CSS -->
     <link href="vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
     <link href="vendors/jquery-toggles/css/themes/toggles-light.css" rel="stylesheet" type="text/css">
-	
-	<!-- Toastr CSS -->
+    
+    <!-- Toastr CSS -->
     <link href="vendors/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
@@ -38,9 +38,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <body>
     
-	
-	<!-- HK Wrapper -->
-	<div class="hk-wrapper hk-vertical-nav">
+    
+    <!-- HK Wrapper -->
+    <div class="hk-wrapper hk-vertical-nav">
 
         <!-- Top Navbar -->
         <nav class="navbar navbar-expand-xl navbar-light fixed-top hk-navbar">
@@ -147,7 +147,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#pages_drp">
                                 <i class="ion ion-ios-copy"></i>
-								<span class="nav-link-text">Pages</span>
+                                <span class="nav-link-text">Pages</span>
                             </a>
                             <ul id="pages_drp" class="nav flex-column collapse collapse-level-1">
                                 <li class="nav-item">
@@ -231,251 +231,269 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
         <!-- Main Content -->
         <div class="hk-pg-wrapper">
-			<!-- Container -->
+            <!-- Container -->
             <div class="container-fluid mt-xl-50 mt-sm-30 mt-15">
                 <!-- Row -->
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hk-row">
-							<div class="col-lg-3 col-md-6">
-								<div class="card card-sm">
-									<div class="card-body">
-										<div class="d-flex justify-content-between mb-5">
-											<div>
-												<span class="d-block font-15 text-dark font-weight-500">Users</span>
-											</div>
-											<div>
-												<span class="text-success font-14 font-weight-500">+10%</span>
-											</div>
-										</div>
-										<div class="text-center">
-											<span class="d-block display-4 text-dark mb-5">36.1K</span>
-											<small class="d-block">172,458 Target Users</small>
-										</div>
-									</div>
-								</div>
-							
-							</div>
-							<div class="col-lg-3 col-md-6">
-								<div class="card card-sm">
-									<div class="card-body">
-										<div class="d-flex justify-content-between mb-5">
-											<div>
-												<span class="d-block font-15 text-dark font-weight-500">Campaign Leads</span>
-											</div>
-											<div>
-												<span class="text-success font-14 font-weight-500">+12.5%</span>
-											</div>
-										</div>
-										<div class="text-center">
-											<span class="d-block display-4 text-dark mb-5"><span class="counter-anim">168,856</span></span>
-											<small class="d-block">472,458 Targeted</small>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6">
-								<div class="card card-sm">
-									<div class="card-body">
-										<div class="d-flex justify-content-between mb-5">
-											<div>
-												<span class="d-block font-15 text-dark font-weight-500">New Contacts</span>
-											</div>
-											<div>
-												<span class="text-warning font-14 font-weight-500">-2.8%</span>
-											</div>
-										</div>
-										<div class="text-center">
-											<span class="d-block display-4 text-dark mb-5">73</span>
-											<small class="d-block">100 Targeted</small>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6">
-								<div class="card card-sm">
-									<div class="card-body">
-										<div class="d-flex justify-content-between mb-5">
-											<div>
-												<span class="d-block font-15 text-dark font-weight-500">Win/Loss Ratio</span>
-											</div>
-											<div>
-												<span class="text-danger font-14 font-weight-500">-75%</span>
-											</div>
-										</div>
-										<div class="text-center">
-											<span class="d-block display-4 text-dark mb-5">48:65</span>
-											<small class="d-block">42:32 Targeted</small>
-										</div>
-									</div>
-								</div>
-							</div>							
-						</div>
-			
-						<div class="hk-row">
-							<div class="col-lg-7">
-								<div class="card">
-									<div class="card-header card-header-action">
-										<h6>Country Stats<small class="text-muted pl-10">Team Selene</small></h6>
-										<div class="d-flex align-items-center card-action-wrap">
-											<a href="#" class="inline-block refresh mr-15">
-												<i class="ion ion-md-arrow-down"></i>
-											</a>
-											<a href="#" class="inline-block full-screen">
-												<i class="ion ion-md-expand"></i>
-											</a>
-										</div>
-									</div>
-									<div class="card-body pa-0">
-										<div class="pa-20">
-											<div id="world_map_marker_1" style="height: 390px"></div>
-										</div>
-										<div class="table-wrap">
-											<div class="table-responsive">
-												<table class="table table-sm table-hover mb-0">
-													<thead>
-														<tr>
-															<th class="w-25">Country</th>
-															<th>Sessions</th>
-															<th>Goals</th>
-															<th>Goals Rate</th>
-															<th>Bounce Rate</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td>Nigeria</td>
-															<td>55,555</td>
-															<td>210</td>
-															<td>2.46%</td>
-															<td>0.26%</td>
-														</tr>
-														<tr>
-															<td>India</td>
-															<td>24,152</td>
-															<td>135</td>
-															<td>0.58%</td>
-															<td>0.43%</td>
-														</tr>
-														
-													</tbody>
-												</table>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-5">
-								<div class="card overflow-hide border-0">
-									<div class="card-body pa-0">
-										<div id="owl_demo_1" class="owl-carousel dots-on-item owl-theme">
-											<div class="fadeOut item img-background overlay-wrap bg-warning">
-												<div class="position-relative z-index-2 pa-20">
-													<div class="position-relative text-white mnh-225p">
-														<p>Get your networth calculated and sentto your mail in three minutes, Discover where you stand with just a few questions</p>
-														<div class="media position-absolute b-0 l-0 align-items-center">
-															<div class="media-img-wrap d-flex mr-15">
-																<div class="avatar avatar-sm">
-																	<span class="avatar-text avatar-text-inv-yellow rounded-circle"><span class="initial-wrap"><span>UT</span></span></span>
-																</div>
-															</div>
-															<div class="media-body">
-																<span class="d-block font-14 font-weight-500">Utibe Etim</span>
-																<span class="d-block font-12">Team Lead, Selene Team</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="fadeOut item img-background overlay-wrap bg-warning">
-												<div class="position-relative z-index-2 pa-20">
-													<div class="position-relative text-white mnh-225p">
-														<p>The net worth calculator helps you work out:
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card card-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-5">
+                                            <div>
+                                                <span class="d-block font-15 text-dark font-weight-500">Users</span>
+                                            </div>
+                                            <div>
+                                                <span class="text-success font-14 font-weight-500">+10%</span>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <span class="d-block display-4 text-dark mb-5">36.1K</span>
+                                            <small class="d-block">172,458 Target Users</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card card-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-5">
+                                            <div>
+                                                <span class="d-block font-15 text-dark font-weight-500">Campaign Leads</span>
+                                            </div>
+                                            <div>
+                                                <span class="text-success font-14 font-weight-500">+12.5%</span>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <span class="d-block display-4 text-dark mb-5"><span class="counter-anim">168,856</span></span>
+                                            <small class="d-block">472,458 Targeted</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card card-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-5">
+                                            <div>
+                                                <span class="d-block font-15 text-dark font-weight-500">New Contacts</span>
+                                            </div>
+                                            <div>
+                                                <span class="text-warning font-14 font-weight-500">-2.8%</span>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <span class="d-block display-4 text-dark mb-5">73</span>
+                                            <small class="d-block">100 Targeted</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card card-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-5">
+                                            <div>
+                                                <span class="d-block font-15 text-dark font-weight-500">Win/Loss Ratio</span>
+                                            </div>
+                                            <div>
+                                                <span class="text-danger font-14 font-weight-500">-75%</span>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <span class="d-block display-4 text-dark mb-5">48:65</span>
+                                            <small class="d-block">42:32 Targeted</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>
+            
+                        <div class="hk-row">
+                            <div class="col-lg-7">
+                                <div class="card">
+                                    <div class="card-header card-header-action">
+                                        <h6>Country Stats<small class="text-muted pl-10">Team Selene</small></h6>
+                                        <div class="d-flex align-items-center card-action-wrap">
+                                            <a href="#" class="inline-block refresh mr-15">
+                                                <i class="ion ion-md-arrow-down"></i>
+                                            </a>
+                                            <a href="#" class="inline-block full-screen">
+                                                <i class="ion ion-md-expand"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body pa-0">
+                                        <div class="pa-20">
+                                            <div id="world_map_marker_1" style="height: 390px"></div>
+                                        </div>
+                                        <div class="table-wrap">
+                                            <div class="table-responsive">
+                                                <table class="table table-sm table-hover mb-0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="w-25">Country</th>
+                                                            <th>Sessions</th>
+                                                            <th>Goals</th>
+                                                            <th>Goals Rate</th>
+                                                            <th>Bounce Rate</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Nigeria</td>
+                                                            <td>55,555</td>
+                                                            <td>210</td>
+                                                            <td>2.46%</td>
+                                                            <td>0.26%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>India</td>
+                                                            <td>24,152</td>
+                                                            <td>135</td>
+                                                            <td>0.58%</td>
+                                                            <td>0.43%</td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="card overflow-hide border-0">
+                                    <div class="card-body pa-0">
+                                        <div id="owl_demo_1" class="owl-carousel dots-on-item owl-theme">
+                                            <div class="fadeOut item img-background overlay-wrap bg-warning">
+                                                <div class="position-relative z-index-2 pa-20">
+                                                    <div class="position-relative text-white mnh-225p">
+                                                        <p>Get your networth calculated and sent to your mail in three minutes, Discover where you stand with just a few questions</p>
+                                                        <div class="media position-absolute b-0 l-0 align-items-center">
+                                                            <div class="media-img-wrap d-flex mr-15">
+                                                                <div class="avatar avatar-sm">
+                                                                    <span class="avatar-text avatar-text-inv-yellow rounded-circle"><span class="initial-wrap"><span>UT</span></span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <span class="d-block font-14 font-weight-500">Utibe Etim</span>
+                                                                <span class="d-block font-12">Team Lead, Selene Team</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fadeOut item img-background overlay-wrap bg-warning">
+                                                <div class="position-relative z-index-2 pa-20">
+                                                    <div class="position-relative text-white mnh-225p">
+                                                        <p>The net worth calculator helps you work out:
                                                             if your total assets outweigh your debts
                                                             the strength of your current financial situation</p>
-														<div class="media position-absolute b-0 l-0 align-items-center">
-															<div class="media-img-wrap d-flex mr-15">
-																<div class="avatar avatar-sm">
-																	<span class="avatar-text avatar-text-inv-green rounded-circle"><span class="initial-wrap"><span>UE</span></span></span>
-																</div>
-															</div>
-															<div class="media-body">
-																<span class="d-block font-14 font-weight-500">Uduak Essien</span>
-																<span class="d-block font-12">Backend Developer</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							
-								<div class="card">
-									<div class="card-header card-header-action">
-										<h6>Recent Activity</h6>
-										<div class="d-flex align-items-center card-action-wrap">
-											<div class="inline-block dropdown">
-												<a class="dropdown-toggle no-caret" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="ion ion-ios-more"></i></a>
-												<div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="#">Refresh</a>													
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="card-body">
-										<div class="user-activity user-activity-sm">
-											<div class="media">
-												<div class="media-img-wrap">
-													<div class="avatar avatar-xs">
-														<img src="dist/img/avatar2.jpg" alt="user" class="avatar-img rounded-circle">
-													</div>
-												</div>
-												<div class="media-body">
-													<div>
-														<span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Adeyemi Adeshina</span><span class="pl-5">Checked his networth.</span></span>
-														<span class="d-block font-13">3 hours ago</span>
-													</div>
-												</div>
-											</div>
-											<div class="media">
-												<div class="media-img-wrap">
-													<div class="avatar avatar-xs">
-														<img src="dist/img/avatar3.jpg" alt="user" class="avatar-img rounded-circle">
-													</div>
-												</div>
-												<div class="media-body">
-													<div>
-														<span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Badmus Akeem Adedayo</span><span class="pl-5">joined team selene</span></span>
-														<span class="d-block font-13 mb-10">6 days ago</span>
-													</div>
-													
-												</div>
-											</div>
-											<div class="media">
-												<div class="media-img-wrap">
-													<div class="avatar avatar-xs">
-														<img src="dist/img/avatar4.jpg" alt="user" class="avatar-img rounded-circle">
-													</div>
-												</div>
-												<div class="media-body">
-													<div>
-														<span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Nnaemeka Igboanyika Robin</span><span class="pl-5">checked his networth</span></span>
-														<span class="d-block font-13">32 days ago</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							
-							</div>
-						</div>
-						
+                                                        <div class="media position-absolute b-0 l-0 align-items-center">
+                                                            <div class="media-img-wrap d-flex mr-15">
+                                                                <div class="avatar avatar-sm">
+                                                                    <span class="avatar-text avatar-text-inv-green rounded-circle"><span class="initial-wrap"><span>UE</span></span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <span class="d-block font-14 font-weight-500">Uduak Essien</span>
+                                                                <span class="d-block font-12">Backend Developer</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fadeOut item img-background overlay-wrap bg-warning">
+                                                <div class="position-relative z-index-2 pa-20">
+                                                    <div class="position-relative text-white mnh-225p">
+                                                        <p>With the help of our intelligent algorithm, we keep track, help analyze and tell you when its best to sell your highly valued assets in differs location</p>
+                                                        <div class="media position-absolute b-0 l-0 align-items-center">
+                                                            <div class="media-img-wrap d-flex mr-15">
+                                                                <div class="avatar avatar-sm">
+                                                                    <span class="avatar-text avatar-text-inv-black rounded-circle"><span class="initial-wrap"><span>PN</span></span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <span class="d-block font-14 font-weight-500">Prosper Ndubueze</span>
+                                                                <span class="d-block font-12">Frontend Developer</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="card">
+                                    <div class="card-header card-header-action">
+                                        <h6>Recent Activity</h6>
+                                        <div class="d-flex align-items-center card-action-wrap">
+                                            <div class="inline-block dropdown">
+                                                <a class="dropdown-toggle no-caret" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="ion ion-ios-more"></i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#">Refresh</a>                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="user-activity user-activity-sm">
+                                            <div class="media">
+                                                <div class="media-img-wrap">
+                                                    <div class="avatar avatar-xs">
+                                                        <img src="dist/img/avatar2.jpg" alt="user" class="avatar-img rounded-circle">
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <div>
+                                                        <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Adeyemi Adeshina</span><span class="pl-5">Checked his networth.</span></span>
+                                                        <span class="d-block font-13">3 hours ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class="media-img-wrap">
+                                                    <div class="avatar avatar-xs">
+                                                        <img src="dist/img/avatar3.jpg" alt="user" class="avatar-img rounded-circle">
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <div>
+                                                        <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Badmus Akeem Adedayo</span><span class="pl-5">joined team selene</span></span>
+                                                        <span class="d-block font-13 mb-10">6 days ago</span>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class="media-img-wrap">
+                                                    <div class="avatar avatar-xs">
+                                                        <img src="dist/img/avatar4.jpg" alt="user" class="avatar-img rounded-circle">
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <div>
+                                                        <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Nnaemeka Igboanyika Robin</span><span class="pl-5">checked his networth</span></span>
+                                                        <span class="d-block font-13">32 days ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        
                 <!-- /Row -->
             </div>
             <!-- /Container -->
-			
+            
             <!-- Footer -->
             <div class="hk-footer-wrap container">
                 <footer class="footer">
@@ -518,33 +536,33 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <!-- Toggles JavaScript -->
     <script src="vendors/jquery-toggles/toggles.min.js"></script>
     <script src="dist/js/toggle-data.js"></script>
-	
-	<!-- Counter Animation JavaScript -->
-	<script src="vendors/waypoints/lib/jquery.waypoints.min.js"></script>
-	<script src="vendors/jquery.counterup/jquery.counterup.min.js"></script>
-	
-	<!-- Sparkline JavaScript -->
+    
+    <!-- Counter Animation JavaScript -->
+    <script src="vendors/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="vendors/jquery.counterup/jquery.counterup.min.js"></script>
+    
+    <!-- Sparkline JavaScript -->
     <script src="vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script>
-	
-	<!-- Vector Maps JavaScript -->
+    
+    <!-- Vector Maps JavaScript -->
     <script src="vendors/vectormap/jquery-jvectormap-2.0.3.min.js"></script>
     <script src="vendors/vectormap/jquery-jvectormap-world-mill-en.js"></script>
-	<script src="dist/js/vectormap-data.js"></script>
+    <script src="dist/js/vectormap-data.js"></script>
 
-	<!-- Owl JavaScript -->
+    <!-- Owl JavaScript -->
     <script src="vendors/owl.carousel/dist/owl.carousel.min.js"></script>
-	
-	<!-- Toastr JS -->
+    
+    <!-- Toastr JS -->
     <script src="vendors/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
     
-	<!-- Apex JavaScript -->
+    <!-- Apex JavaScript -->
     <script src="vendors/apexcharts/dist/apexcharts.min.js"></script>
-	<script src="dist/js/irregular-data-series.js"></script>
-	 
+    <script src="dist/js/irregular-data-series.js"></script>
+     
     <!-- Init JavaScript -->
     <script src="dist/js/init.js"></script>
-	<script src="dist/js/dashboard-data.js"></script>
-	
+    <script src="dist/js/dashboard-data.js"></script>
+    
 </body>
 
 </html>

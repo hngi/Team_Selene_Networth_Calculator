@@ -1,0 +1,1 @@
+# Old registered users should register again in order to make the update take effect in their account
