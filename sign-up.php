@@ -85,6 +85,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $_SESSION["success_message"] = "Registration Successful! Login to Continue.";
                 header("location: sign-in.php");
 
+                $user = $_POST["username"];
+                $assetsFileOfUser = "assetsFor$user.txt";
+                $file2 = fopen($assetsFileOfUser,"w");
+                fclose($file2);
+
+
+                $liabilitiesFileOfUser = "liabilitiesFor$user.txt";
+                $file3 = fopen($liabilitiesFileOfUser,"w");
+                fclose($file3);
+
+                $networthFileOfUser = "networthFor$user.txt";
+                $file4 = fopen($networthFileOfUser,"w");
+                fclose($fil4);
+
 
 
             } else{

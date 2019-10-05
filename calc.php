@@ -8,6 +8,52 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
+<?php
+if (isset($_POST['calc-networth']))
+    {
+      if(isset($_POST['calc-networth']))
+      {
+        // Assets
+
+        $user = $_SESSION['username'];
+        $assetsCash = $_POST['cash'];
+        $assetsBusiness = $_POST['business'];
+        $assetsEstate = $_POST['real-estate'];
+        $assetsInvestment = $_POST['investment'];
+        $assetsSavings = $_POST['savings'];
+        $assetsProperty = $_POST['property'];
+
+        $totalAssets = $assetsCash + $assetsBusiness + $assetsEstate + $assetsInvestment + $assetsSavings + $assetsProperty;
+
+        $assetsfileType = "assetsFor$user.txt";
+        $assetsfile = fopen($assetsfileType, "w");
+        fputs($assetsfile, $totalAssets);       
+        fclose($assetsfile);
+
+        // Liabilities
+
+        $debts = $_POST['debt'];
+        $bills = $_POST['bills'];
+        
+
+        $totalLiabilities = $debts + $bills;
+
+        $liabilitiesFileType = "liabilitiesFor$user.txt";
+        $liabilitiesfile = fopen($liabilitiesFileType, "w");
+        fputs($liabilitiesfile, $totalLiabilities);
+        fclose($liabilitiesfile);
+
+        //Calc total networth
+
+        $totalNetworth = $totalAssets - $totalLiabilities;
+
+        $networthFileType = "networthFor$user.txt";
+        $networthfile = fopen($networthFileType, "w");
+        fputs($networthfile, $totalNetworth);
+        fclose($networthfile);
+      }
+    }
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -245,7 +291,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 											<div class="row">
 													<div class="col-sm">
 														<!-- <form action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" methond="post"> -->
-														<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" methond="post">
+														<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" name="calc-networth">
 																<h5 class="hk-sec-title">Assets</h5>
 																<div class="form-group">
 																		<label for="cash">Cash</label>
@@ -253,7 +299,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 																			<div class="input-group-prepend">
 																				<span class="input-group-text">₦</span>
 																			</div>
-																			<input class="form-control" id="cash" placeholder="00.00" type="number">
+																			<input class="form-control" name="cash" placeholder="00.00" type="number" value="00">
 																		</div>
 																	</div>
 
@@ -263,7 +309,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 																				<div class="input-group-prepend">
 																					<span class="input-group-text">₦</span>
 																				</div>
-																				<input class="form-control" id="business" placeholder="00.00" type="number">
+																				<input class="form-control" name="business" placeholder="00.00" type="number" value="00">
 																			</div>
 																		</div>
 
@@ -273,7 +319,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 																					<div class="input-group-prepend">
 																						<span class="input-group-text">₦</span>
 																					</div>
-																					<input class="form-control" id="real-estate" placeholder="00.00" type="number">
+																					<input class="form-control" name="real-estate" placeholder="00.00" type="number" value="00">
 																				</div>
 																			</div>
 		
@@ -283,7 +329,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 																						<div class="input-group-prepend">
 																							<span class="input-group-text">₦</span>
 																						</div>
-																						<input class="form-control" id="investment" placeholder="00.00" type="number">
+																						<input class="form-control" name="investment" placeholder="00.00" type="number" value="00">
 																					</div>
 																				</div>
 																				<div class="form-group">
@@ -292,7 +338,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 																							<div class="input-group-prepend">
 																								<span class="input-group-text">₦</span>
 																							</div>
-																							<input class="form-control" id="savings" placeholder="00.00" type="number">
+																							<input class="form-control" name="savings" placeholder="00.00" type="number" value="00">
 																						</div>
 																					</div>
 
@@ -302,11 +348,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 																								<div class="input-group-prepend">
 																									<span class="input-group-text">₦</span>
 																								</div>
-																								<input class="form-control" id="property" placeholder="00.00" type="number">
+																								<input class="form-control" name="property" placeholder="00.00" type="number" value="00">
 																							</div>
 																						</div>
 	
-                                                                                        <h5 class="hk-sec-title ">Total Assets: <span class="js--show-assets" id="showNetAsset">0.00</span></h5>
+                                                                                        <h5 class="hk-sec-title ">Total Assets: <span class="js--show-assets" id="showNetAsset">
+                                                                                            <?php 
+                                                                                        $user = $_SESSION['username'];
+                                                                                        $assetsFileOfUser = "assetsFor$user.txt";
+                                                                                        $file = fopen($assetsFileOfUser,"r");
+                                                                                        echo "₦".fgets($file);
+                                                                                        ?>
+                                                                                        </span></h5>
 													</div>
 												</div>
 
@@ -334,7 +387,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 																				<div class="input-group-prepend">
 																					<span class="input-group-text">₦</span>
 																				</div>
-																				<input class="form-control" id="debt" placeholder="00.00" type="number">
+																				<input class="form-control" name="debt" placeholder="00.00" type="number" value="00">
 																			</div>
 																		</div>
 	
@@ -344,14 +397,20 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 																					<div class="input-group-prepend">
 																						<span class="input-group-text">₦</span>
 																					</div>
-																					<input class="form-control" id="bills" placeholder="00.00" type="number">
+																					<input class="form-control" name="bills" placeholder="00.00" type="number" value="00">
 																				</div>
 																			</div>
 	
-																			<h5 class="hk-sec-title" style="margin: 1.5rem 0;">Total Liabilities: <span id="showNetLiabilities" class="js--show-liabilities">0.00</span></h5>
+																			<h5 class="hk-sec-title" style="margin: 1.5rem 0;">Total Liabilities: <span id="showNetLiabilities" class="js--show-liabilities">
+                                                                            <?php 
+                                                                            $user = $_SESSION['username'];
+                                                                            $liabilitiesFileOfUser = "liabilitiesFor$user.txt";
+                                                                            $file = fopen($liabilitiesFileOfUser,"r");
+                                                                            echo "₦".fgets($file);
+                                                                            ?>                                                         
+                                                                            </span></h5>
 		
-                                                                            <button type="button" class="btn btn-primary mr-10" id="calc-networth" >Calculate</button>
-																<button  class="btn btn-primary mr-10" style="display: none" >Submit</button>
+                                                                            <button type="submit" class="btn btn-primary mr-10" name="calc-networth" >Calculate</button>
                                                                 <button type="reset" class="btn btn-light">Reset</button>
 
                                                                 
@@ -359,7 +418,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                                                 
                                                             </form>
                                                             
-                                                            <h5 class="hk-sec-title" style="margin-top: 2.5rem;">Your NetWorth: <span class="js--show-networth" id="showNetWorth">0.00</span></h5>
+                                                            <h5 class="hk-sec-title" style="margin-top: 2.5rem;">Your NetWorth: <span class="js--show-networth" id="showNetWorth">
+                                                                <?php 
+                                                                $user = $_SESSION['username'];
+                                                                $networthFileOfUser = "networthFor$user.txt";
+                                                                $file = fopen($networthFileOfUser,"r");
+                                                                echo "₦".fgets($file);
+                                                                ?>
+                                                            </span></h5>
                                                         </div>
                                                         
                                                         
