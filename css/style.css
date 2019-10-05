@@ -401,3 +401,19 @@ form {
         box-shadow: 0 1rem 2rem rgba(0,0,0, .4);
         transform: rotate(5deg) scale(1.3);
 }
+
+/* forgot password*/
+.form__group span{
+    float: right;
+    right: 0;
+    margin-right: 0;
+    padding-right: 0;
+}
+.form__group span a{
+    text-decoration: none;
+    color: deepskyblue;
+}
+.pending{
+    color: green!important;
+    font-size: 18px!important;
+}
