@@ -1,7 +1,25 @@
-    const dashboard = document.querySelector('.dashboard__right__contents');
-    const worth = document.querySelector('.networth__wrapper');
-    dashboard.style.display = "block";
-    worth.style.display = "none";
+console.log('name');
+
+const currentlyLoggedInUser = getObject('currentlyLoggedInUser');
+if(currentlyLoggedInUser == null){
+    window.location.href = window.location.href.replace('dashboard.php', 'sign-in.php');
+}
+
+const currentUserEmailElement = document.getElementById('currentUserEmail');
+console.log('currentUserEmailElement', currentUserEmailElement);
+currentUserEmailElement.innerText = currentlyLoggedInUser.username;
+
+function logout() {
+    const auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+}
+
+const dashboard = document.querySelector('.dashboard__right__contents');
+const worth = document.querySelector('.networth__wrapper');
+// dashboard.style.display = "block";
+// worth.style.display = "none";
   
 showDashboard = function(){
     const dashboard = document.querySelector('.dashboard__right__contents');

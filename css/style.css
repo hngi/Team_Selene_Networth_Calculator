@@ -222,12 +222,19 @@ h1 {
     }
     .login__container {
         width: 80%;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
         overflow: hidden;
     }
+    .snp{
+        margin-left: 12%;
+        text-align: center;
+        margin-right: 10%;
+    }
+  
+    
 } 
 
 
@@ -267,6 +274,13 @@ h1 {
     width: 52px;
     height: 52px;
   }
+  .gSignInWrapper{
+    margin-top: 20px;
+    /* margin-right: 80px;
+    float: right;
+    position: relative; */
+  }
+
   span.buttonText {
     display: inline-block;
     vertical-align: middle;
