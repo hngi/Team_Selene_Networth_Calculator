@@ -21,27 +21,36 @@
 
 /* LANDING PAGE CSS */
 .main_wrapper {
-   width: 80%;
+   width: 100%;
    margin: 0 auto; 
 }
 
 .topbar {
-    height: 5rem !important;
+    height: 3rem !important;
     position: relative !important;
 	font-family: 'Raleway', sans-serif;
 	font-size: 1em !important;
     padding:2em 0.63em !important;
     overflow: hidden;
-    margin-top: 20px;
     margin-bottom: -50px;
+    background-image: linear-gradient(135deg,#000000 0%,#7f8c8d 74%);
+    color: #fff
 }
 
 .topbar a {
 	right: .5rem;
-	top: 2rem;
+	top: 10px;
 	text-align: center;
 	float: right;
 }
+ .topbar p {
+    position: absolute;
+    top: 1.0rem;
+    font-weight: bold;
+    padding-left: 5px;
+}	 
+	 
+	 
 .checker-extra-padding{
     margin-top: -6px;
 }
